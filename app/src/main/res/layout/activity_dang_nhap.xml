@@ -44,12 +44,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textColor="@color/mauhong"
-            android:textStyle="bold"
             android:text="Đăng nhập"
-            android:textSize="50dp" />
+            android:textColor="@color/mauhong"
+            android:textSize="50dp"
+            android:textStyle="bold" />
 
-        <EditText
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/edit_center_user_dangnhap"
             android:layout_width="350dp"
             android:layout_height="50dp"
