@@ -1,7 +1,8 @@
-package com.example.ducluu.petshop;
+package com.example.ducluu.petshop.views;
 
 import android.os.Bundle;
 
+import com.example.ducluu.petshop.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;

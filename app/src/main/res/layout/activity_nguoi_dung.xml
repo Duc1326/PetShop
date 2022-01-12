@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:backgroundTint="#F8F8A0"
     android:background="@color/white"
-    tools:context=".NguoiDung">
+    tools:context=".views.NguoiDung">
 
 
     <RelativeLayout

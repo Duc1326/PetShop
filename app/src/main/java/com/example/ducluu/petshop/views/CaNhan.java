@@ -1,4 +1,4 @@
-package com.example.ducluu.petshop;
+package com.example.ducluu.petshop.views;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+
+import com.example.ducluu.petshop.R;
 
 public class CaNhan extends AppCompatActivity {
     ImageButton ima_btn_back;

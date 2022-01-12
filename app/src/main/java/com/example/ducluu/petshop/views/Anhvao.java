@@ -1,4 +1,4 @@
-package com.example.ducluu.petshop;
+package com.example.ducluu.petshop.views;
 
 public class Anhvao {
     private int resourceid;

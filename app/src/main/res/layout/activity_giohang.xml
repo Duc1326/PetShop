@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/main_giohang"
-    tools:context=".GioHang"
+    tools:context=".views.GioHang"
     android:background="#F8F8A0"
     android:layout_weight="10"
     android:orientation="vertical">

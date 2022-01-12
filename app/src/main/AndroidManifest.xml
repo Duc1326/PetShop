@@ -10,59 +10,59 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PetShop">
         <activity
-            android:name=".Lichsumuahang"
+            android:name=".views.Lichsumuahang"
             android:exported="true" />
         <activity
-            android:name=".Dangnhap_Dangki"
+            android:name=".views.Dangnhap_Dangki"
             android:exported="true" />
         <activity
-            android:name=".DangNhap"
+            android:name=".views.DangNhap"
             android:exported="true" />
         <activity
-            android:name=".ThongTinsp"
+            android:name=".views.ThongTinsp"
             android:exported="true" />
         <activity
-            android:name=".TroChuyen"
+            android:name=".views.TroChuyen"
             android:exported="true" />
         <activity
-            android:name=".ThanhToan"
+            android:name=".views.ThanhToan"
             android:exported="true" />
         <activity
-            android:name=".ThucAn"
+            android:name=".views.ThucAn"
             android:exported="true" />
         <activity
-            android:name=".ThuocThuY"
+            android:name=".views.ThuocThuY"
             android:exported="true" />
         <activity
-            android:name=".SanPham"
+            android:name=".views.SanPham"
             android:exported="true" />
         <activity
-            android:name=".CaNhan"
+            android:name=".views.CaNhan"
             android:exported="true" />
         <activity
-            android:name=".NguoiDung"
+            android:name=".views.NguoiDung"
             android:exported="true" />
         <activity
-            android:name=".DangKy"
+            android:name=".views.DangKy"
             android:exported="true" />
         <activity
-            android:name=".ThongBao"
+            android:name=".views.ThongBao"
             android:exported="true" />
         <activity
-            android:name=".TrangChu"
+            android:name=".views.TrangChu"
             android:exported="true" />
         <activity
-            android:name=".GioHang"
+            android:name=".views.GioHang"
             android:exported="true" />
         <activity
-            android:name=".PhuKien1"
+            android:name=".views.PhuKien1"
             android:exported="true" />
         <activity
-            android:name=".BottomNavigation"
+            android:name=".views.BottomNavigation"
             android:exported="true"
             android:label="@string/title_activity_bottom_navigation" />
         <activity
-            android:name=".Anhvao_activity"
+            android:name=".views.Anhvao_activity"
             android:exported="true"
             >
             <intent-filter>
