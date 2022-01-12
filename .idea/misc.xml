@@ -3,6 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/PetShop/PetShop/app/src/main/res/drawable/button_pressed.xml" value="0.19583333333333333" />
+        <entry key="..\:/PetShop/PetShop/app/src/main/res/layout/activi_lichsumuahang.xml" value="0.16666666666666666" />
+        <entry key="..\:/PetShop/PetShop/app/src/main/res/layout/activity_ca_nhan.xml" value="0.16485507246376813" />
+        <entry key="..\:/PetShop/PetShop/app/src/main/res/layout/activity_giohang.xml" value="0.16485507246376813" />
+        <entry key="..\:/PetShop/PetShop/app/src/main/res/layout/activity_nguoi_dung.xml" value="0.16485507246376813" />
+        <entry key="..\:/PetShop/PetShop/app/src/main/res/layout/activity_san_pham.xml" value="0.1796875" />
+        <entry key="..\:/PetShop/PetShop/app/src/main/res/layout/activity_thanh_toan.xml" value="0.16485507246376813" />
+        <entry key="..\:/PetShop/PetShop/app/src/main/res/layout/activity_thong_bao.xml" value="0.1796875" />
+        <entry key="..\:/PetShop/PetShop/app/src/main/res/layout/activity_thong_tinsp.xml" value="0.16485507246376813" />
+        <entry key="..\:/PetShop/PetShop/app/src/main/res/layout/activity_thuoc_thu_y.xml" value="0.1796875" />
+        <entry key="..\:/PetShop/PetShop/app/src/main/res/layout/activity_trangchu.xml" value="0.1796875" />
+        <entry key="..\:/PetShop/PetShop/app/src/main/res/layout/dong_giohang.xml" value="0.22" />
+        <entry key="..\:/PetShop/PetShop/app/src/main/res/layout/dong_lichsumuahang.xml" value="0.3333333333333333" />
+        <entry key="..\:/PetShop/PetShop/app/src/main/res/layout/dong_sanpham.xml" value="0.15353260869565216" />
+        <entry key="..\:/PetShop/PetShop/app/src/main/res/layout/dong_thongbao.xml" value="0.16485507246376813" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/PetShop/app/src/main/res/drawable/boder_1.xml" value="0.2518518518518518" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/PetShop/app/src/main/res/drawable/boder_3.xml" value="0.2518518518518518" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/PetShop/app/src/main/res/drawable/boder_4.xml" value="0.2518518518518518" />
@@ -50,6 +65,34 @@
         <entry key="..\:/Users/USER/AndroidStudioProjects/PetShop/app/src/main/res/layout/thongtinsp.xml" value="0.259375" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/PetShop/app/src/main/res/menu/bottom_nav_menu.xml" value="0.259375" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/PetShop/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2601851851851852" />
+        <entry key="..\:/document/121_hocki_5/LapTrinhDiDong_T7/File/PetShop/app/src/main/res/drawable/boder_1.xml" value="0.19739583333333333" />
+        <entry key="..\:/document/121_hocki_5/LapTrinhDiDong_T7/File/PetShop/app/src/main/res/drawable/boder_3.xml" value="0.19739583333333333" />
+        <entry key="..\:/document/121_hocki_5/LapTrinhDiDong_T7/File/PetShop/app/src/main/res/drawable/boder_4.xml" value="0.2046875" />
+        <entry key="..\:/document/121_hocki_5/LapTrinhDiDong_T7/File/PetShop/app/src/main/res/drawable/boder_5.xml" value="0.2046875" />
+        <entry key="..\:/document/121_hocki_5/LapTrinhDiDong_T7/File/PetShop/app/src/main/res/drawable/boder_6.xml" value="0.2046875" />
+        <entry key="..\:/document/121_hocki_5/LapTrinhDiDong_T7/File/PetShop/app/src/main/res/drawable/boder_layout.xml" value="0.2046875" />
+        <entry key="..\:/document/121_hocki_5/LapTrinhDiDong_T7/File/PetShop/app/src/main/res/layout/activiti_phukien.xml" value="0.18854166666666666" />
+        <entry key="..\:/document/121_hocki_5/LapTrinhDiDong_T7/File/PetShop/app/src/main/res/layout/activity_anhvao.xml" value="0.16757246376811594" />
+        <entry key="..\:/document/121_hocki_5/LapTrinhDiDong_T7/File/PetShop/app/src/main/res/layout/activity_ca_nhan.xml" value="0.18854166666666666" />
+        <entry key="..\:/document/121_hocki_5/LapTrinhDiDong_T7/File/PetShop/app/src/main/res/layout/activity_dang_ky.xml" value="0.1671195652173913" />
+        <entry key="..\:/document/121_hocki_5/LapTrinhDiDong_T7/File/PetShop/app/src/main/res/layout/activity_dang_nhap.xml" value="0.2" />
+        <entry key="..\:/document/121_hocki_5/LapTrinhDiDong_T7/File/PetShop/app/src/main/res/layout/activity_dangnhap_dangki.xml" value="0.1644021739130435" />
+        <entry key="..\:/document/121_hocki_5/LapTrinhDiDong_T7/File/PetShop/app/src/main/res/layout/activity_giohang.xml" value="0.1734375" />
+        <entry key="..\:/document/121_hocki_5/LapTrinhDiDong_T7/File/PetShop/app/src/main/res/layout/activity_nguoi_dung.xml" value="0.1734375" />
+        <entry key="..\:/document/121_hocki_5/LapTrinhDiDong_T7/File/PetShop/app/src/main/res/layout/activity_san_pham.xml" value="0.25" />
+        <entry key="..\:/document/121_hocki_5/LapTrinhDiDong_T7/File/PetShop/app/src/main/res/layout/activity_thanh_toan.xml" value="0.16041666666666668" />
+        <entry key="..\:/document/121_hocki_5/LapTrinhDiDong_T7/File/PetShop/app/src/main/res/layout/activity_thong_bao.xml" value="0.22" />
+        <entry key="..\:/document/121_hocki_5/LapTrinhDiDong_T7/File/PetShop/app/src/main/res/layout/activity_thong_tinsp.xml" value="0.25" />
+        <entry key="..\:/document/121_hocki_5/LapTrinhDiDong_T7/File/PetShop/app/src/main/res/layout/activity_thuc_an.xml" value="0.18333333333333332" />
+        <entry key="..\:/document/121_hocki_5/LapTrinhDiDong_T7/File/PetShop/app/src/main/res/layout/activity_thuoc_thu_y.xml" value="0.18333333333333332" />
+        <entry key="..\:/document/121_hocki_5/LapTrinhDiDong_T7/File/PetShop/app/src/main/res/layout/activity_trangchu.xml" value="0.22429078014184398" />
+        <entry key="..\:/document/121_hocki_5/LapTrinhDiDong_T7/File/PetShop/app/src/main/res/layout/activity_tro_chuyen.xml" value="0.1743659420289855" />
+        <entry key="..\:/document/121_hocki_5/LapTrinhDiDong_T7/File/PetShop/app/src/main/res/layout/dong_giohang.xml" value="0.1743659420289855" />
+        <entry key="..\:/document/121_hocki_5/LapTrinhDiDong_T7/File/PetShop/app/src/main/res/layout/dong_sanpham.xml" value="0.1743659420289855" />
+        <entry key="..\:/document/121_hocki_5/LapTrinhDiDong_T7/File/PetShop/app/src/main/res/layout/dong_thongbao.xml" value="0.18" />
+        <entry key="..\:/document/121_hocki_5/LapTrinhDiDong_T7/File/PetShop/app/src/main/res/layout/item_photo.xml" value="0.20380434782608695" />
+        <entry key="..\:/document/121_hocki_5/LapTrinhDiDong_T7/File/PetShop/app/src/main/res/layout/list_dangnhap_dangki.xml" value="0.16757246376811594" />
+        <entry key="..\:/document/121_hocki_5/LapTrinhDiDong_T7/java_taive/PetShop/PetShop/app/src/main/res/layout/activity_trangchu.xml" value="0.20416666666666666" />
       </map>
     </option>
   </component>

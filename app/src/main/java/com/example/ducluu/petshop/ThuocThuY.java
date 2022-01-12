@@ -58,6 +58,12 @@ public class ThuocThuY extends AppCompatActivity {
                 return true;
             }
         });
+        button = (Button) findViewById(R.id.btn);
+        anhxathuoccho();
+        adapter = new SanPhamAdapter(this,R.layout.dong_sanpham,arraySP);
+        lviewSanPham.setAdapter(null);
+        lviewSanPham.setAdapter(adapter);
+        button.setBackground(Drawable.createFromPath("#FE9D9D"));
     }
     Button button;
     ListView lviewSanPham;

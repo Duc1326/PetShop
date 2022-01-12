@@ -1,15 +1,12 @@
 package com.example.ducluu.petshop;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.List;
 
@@ -44,15 +41,13 @@ public class SanPhamAdapter extends BaseAdapter {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         view =inflater.inflate(layout,null);
 
-
-
         //ánh xạ view
         TextView txtTen= (TextView) view.findViewById(R.id.texttensp);
         TextView txtGia = (TextView) view.findViewById(R.id.txtgiasp);
         TextView txtMota =(TextView) view.findViewById(R.id.textmota);
         TextView txtXem =(TextView) view.findViewById(R.id.txtxem);
         ImageView imgHinh = (ImageView) view.findViewById(R.id.imHinhsp);
-        //
+
         spSanPham sp =spSanPhamList.get(i);
         txtTen.setText(sp.getTen());
         txtGia.setText(sp.getGia());
