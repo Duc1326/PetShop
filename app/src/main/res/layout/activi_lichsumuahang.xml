@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/xacnhathanhtoan"
+    android:background="#F8F8A0">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/deltaRelative"
+        tools:ignore="MissingConstraints">
+        <ImageView
+            android:id="@+id/smallRight"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/angle_small_right"
+            />
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lịch Sử Mua Hàng"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:layout_toRightOf="@+id/smallRight"
+            android:layout_marginTop="5dp"
+            />
+
+        <ListView
+            android:layout_marginTop="15dp"
+            android:id="@+id/lvlisumuahang"
+            android:layout_width="409dp"
+            android:layout_height="643dp"
+            android:layout_below="@+id/text1"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="31dp" />
+
+
+    </RelativeLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/botton_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:itemRippleColor="@android:color/transparent"
+        app:itemIconSize="30dp"
+        app:labelVisibilityMode="unlabeled"
+        app:itemIconTint="@color/color_bar"
+        app:menu="@menu/bottom_nav_menu"
+        android:background="@color/white"
+        />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

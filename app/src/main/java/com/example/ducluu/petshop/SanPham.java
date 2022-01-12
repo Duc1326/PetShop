@@ -10,8 +10,10 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Switch;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
@@ -24,8 +26,6 @@ public class SanPham extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_san_pham);
-
-
         BottomNavigationView bt  = findViewById(R.id.bottom_navigation);
 
         bt.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
@@ -55,12 +55,40 @@ public class SanPham extends AppCompatActivity {
                         break;
 
                 }
-
-
                 return true;
             }
         });
 
+        Intent intent = getIntent();
+        Integer id = intent.getIntExtra("dulieu",1);
+
+        switch (id){
+            case 1:
+                button = findViewById(R.id.btn);
+                anhxacho();
+                break;
+            case 2:
+                button = findViewById(R.id.btn1);
+                anhxameo();
+                break;
+            case 3:
+                button = findViewById(R.id.btn2);
+                anhxachim();
+                break;
+            case 4:
+                button = findViewById(R.id.btn3);
+                anhxaca();
+                break;
+            default:
+                button = findViewById(R.id.btn);
+                anhxacho();
+                break;
+        }
+
+        adapter = new SanPhamAdapter(this,R.layout.dong_sanpham,arraySP);
+        lviewSanPham.setAdapter(null);
+        lviewSanPham.setAdapter(adapter);
+        button.setBackground(Drawable.createFromPath("#FE9D9D"));
     }
     Button button;
     ListView lviewSanPham;
@@ -133,7 +161,18 @@ public class SanPham extends AppCompatActivity {
                 button.setBackgroundDrawable(dr);
 
                 break;
-
+            case R.id.txtxem:
+                Intent chitiet = new Intent(SanPham.this, ThongTinsp.class);
+                startActivity(chitiet);
+                break;
+            case R.id.btgio:
+                Intent giohang = new Intent(SanPham.this, GioHang.class);
+                startActivity(giohang);
+                break;
+            case R.id.btmuan:
+                Intent thanhtoan = new Intent(SanPham.this, ThanhToan.class);
+                startActivity(thanhtoan);
+                break;
 
             default:
                 break;
@@ -177,5 +216,6 @@ public class SanPham extends AppCompatActivity {
         arraySP.add(new spSanPham("Cá đầu lân","đ50.000","Loại cá phù hợp nuôi làm thú vui",R.drawable.cadaulan));
 
     }
+
 
 }

@@ -14,7 +14,7 @@ import com.google.android.material.navigation.NavigationBarView;
 
 public class NguoiDung extends AppCompatActivity {
 
-    Button btn_chinhsuauser;
+    Button btn_chinhsuauser,btnlichsumuahang;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,6 +58,14 @@ public class NguoiDung extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(NguoiDung.this, CaNhan.class);
+                startActivity(intent);
+            }
+        });
+        btnlichsumuahang = findViewById(R.id.btn_center_lichsumuahang_user);
+        btnlichsumuahang.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(NguoiDung.this, Lichsumuahang.class);
                 startActivity(intent);
             }
         });

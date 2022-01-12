@@ -4,88 +4,87 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F3F3D0"
+    android:background="@drawable/anhnen_dangnhap"
     tools:context=".DangKy">
 
     <RelativeLayout
-        android:id="@+id/top_layout"
+        android:id="@+id/top_layout_dangnhap"
         android:layout_width="match_parent"
-        android:layout_height="149dp"
-        android:background="#F3F3D0"
-        app:layout_constraintHeight_percent="0.78"
-        app:layout_constraintVertical_bias="0">
+        android:layout_height="270dp">
+
+
+        <ImageButton
+            android:id="@+id/image_back_dangky"
+            android:layout_width="90dp"
+            android:layout_height="60dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_baseline_keyboard_backspace_24" />
 
         <ImageView
-            android:id="@+id/image_toplayout_logo_dangki"
+            android:id="@+id/image_anhlogo_top_dangnhap"
             android:layout_width="200dp"
             android:layout_height="200dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="130dp"
-            android:layout_marginTop="38dp"
-            android:layout_marginEnd="130dp"
-            android:layout_marginBottom="0dp"
+            android:layout_centerInParent="true"
+            android:layout_marginHorizontal="90dp"
+            android:layout_marginTop="30dp"
+            android:scaleType="fitCenter"
             android:src="@drawable/logo_shop" />
 
     </RelativeLayout>
 
     <RelativeLayout
-        android:id="@+id/layout_center_dangki"
+        android:id="@+id/constraintlayout"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:layout_below="@+id/top_layout"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="50dp"
-        android:background="#F3F3D0">
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_layout_dangnhap"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Đăng Ký"
+            android:textColor="@color/mauhong"
+            android:textSize="50dp"
+            android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/edit_center_taikhoan_dangki"
+            android:id="@+id/edit_center_user_dangky"
             android:layout_width="350dp"
             android:layout_height="50dp"
             android:layout_marginStart="30dp"
-            android:layout_marginTop="120dp"
+            android:layout_marginTop="70dp"
             android:layout_marginEnd="30dp"
             android:background="@drawable/boder_3"
             android:hint="Phone number" />
 
         <EditText
-            android:id="@+id/edit_center_pass_dangki"
+            android:id="@+id/edit_center_password_dangnhap"
             android:layout_width="350dp"
             android:layout_height="50dp"
             android:layout_marginStart="30dp"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="140dp"
             android:layout_marginEnd="30dp"
-            android:layout_marginBottom="537dp"
+            android:background="@drawable/boder_3"
+            android:hint="Password" />
+        <EditText
+            android:id="@+id/edit_center_fogetpassword_dangky"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="210dp"
+            android:layout_marginEnd="30dp"
             android:background="@drawable/boder_3"
             android:hint="Password" />
 
-        <TextView
-            android:id="@+id/foget_pass"
-            android:layout_width="230dp"
-            android:layout_height="36dp"
-            android:layout_marginStart="155dp"
-            android:layout_marginTop="255dp"
-            android:paddingLeft="20dp"
-            android:paddingTop="5dp"
-            android:text="Tôi đồng ý với các điều khoảng trên?"
-            android:textSize="13sp" />
-
-        <CheckBox
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="140dp"
-            android:layout_marginTop="255dp"/>
-
         <Button
-            android:id="@+id/btn_center_login_dangki"
+            android:id="@+id/btn_center_login_dangky"
             android:layout_width="300dp"
             android:layout_height="60dp"
             android:layout_marginStart="60dp"
             android:layout_marginTop="300dp"
             android:layout_marginEnd="60dp"
-            android:layout_marginBottom="49dp"
             android:background="@drawable/boder_5"
             android:text="Đăng Ký"
             android:textAllCaps="false"
@@ -94,49 +93,20 @@
             android:textStyle="bold" />
     </RelativeLayout>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="90dp"
-        android:layout_marginTop="200dp">
-
-        <Button
-            android:id="@+id/btn_center_dangnhap_dangki"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="45dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/boder_5"
-            android:backgroundTint="#F3F3D0"
-            android:text="Đăng nhập"
-            android:textAllCaps="false"
-            android:textSize="20dp" />
-
-        <Button
-
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="220dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/boder_5"
-            android:text="Đăng ký"
-            android:textAllCaps="false"
-            android:textSize="20dp" />
-
-
-    </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/fb_gg_zl_dangnhap"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="600dp">
+        android:layout_below="@+id/constraintlayout"
+        android:layout_marginTop="10dp">
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/facce_book"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="80dp"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/google"
             android:backgroundTint="@color/white"
             android:src="@drawable/fb02" />
 
@@ -144,7 +114,7 @@
             android:id="@+id/google"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="180dp"
+            android:layout_centerInParent="true"
             android:backgroundTint="@color/white"
             android:src="@drawable/google" />
 
@@ -152,7 +122,8 @@
             android:id="@+id/zalo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="270dp"
+            android:layout_toRightOf="@+id/google"
+            android:layout_marginLeft="20dp"
             android:backgroundTint="@color/white"
             android:src="@drawable/iconzalo" />
     </RelativeLayout>

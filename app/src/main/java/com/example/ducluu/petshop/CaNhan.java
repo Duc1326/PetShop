@@ -25,8 +25,5 @@ public class CaNhan extends AppCompatActivity {
 
             }
         });
-
-
-
     }
 }

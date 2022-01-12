@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PetShop">
         <activity
+            android:name=".Lichsumuahang"
+            android:exported="true" />
+        <activity
+            android:name=".Dangnhap_Dangki"
+            android:exported="true" />
+        <activity
+            android:name=".DangNhap"
+            android:exported="true" />
+        <activity
             android:name=".ThongTinsp"
             android:exported="true" />
         <activity
@@ -46,15 +55,18 @@
             android:name=".GioHang"
             android:exported="true" />
         <activity
+            android:name=".PhuKien1"
+            android:exported="true" />
+        <activity
             android:name=".BottomNavigation"
             android:exported="true"
             android:label="@string/title_activity_bottom_navigation" />
         <activity
-            android:name=".DangNhap"
-            android:exported="true">
+            android:name=".Anhvao_activity"
+            android:exported="true"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

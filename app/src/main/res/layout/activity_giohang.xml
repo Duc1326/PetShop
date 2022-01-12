@@ -6,13 +6,14 @@
     android:layout_height="match_parent"
     android:id="@+id/main_giohang"
     tools:context=".GioHang"
+    android:background="#F8F8A0"
     android:layout_weight="10"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0px"
-        android:background="#F3F3D0"
+        android:background="#F8F8A0"
         android:layout_weight="0.8">
         <EditText
 
@@ -36,7 +37,7 @@
     <TextView
     android:paddingLeft="10dp"
     android:layout_weight="0.1"
-    android:background="#F3F3D0"
+        android:background="#F8F8A0"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:text=">Giỏ Hàng"
@@ -47,7 +48,7 @@
         android:layout_width="match_parent"
         android:layout_height="0px"
         android:layout_above="@id/bottom_navigation"
-        android:background="#F3F3D0">
+        android:background="#F8F8A0">
 
 
     </ListView>
@@ -56,6 +57,7 @@
         android:layout_width="wrap_content"
         android:layout_height="0px"
         android:orientation="horizontal"
+        android:backgroundTint="#F8F8A0"
         android:background="@drawable/bovienvuong">
         <CheckBox
             android:layout_centerVertical="true"

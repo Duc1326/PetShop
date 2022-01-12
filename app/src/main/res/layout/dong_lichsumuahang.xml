@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".dong_sanphamAdapter"
+    android:background="@drawable/bodong">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+
+            android:id="@+id/imHinhsp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/cho1" />
+
+        <TextView
+            android:id="@+id/texttensp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/imHinhsp"
+
+            android:text="Text"
+            android:textSize="17sp" />
+
+        <Button
+            android:id="@+id/txtxem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@color/white"
+            android:onClick="onClick"
+            android:text="xem chi tiết"
+            android:textColor="#E272E6" />
+
+        <TextView
+            android:id="@+id/txtgiasp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/texttensp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/imHinhsp"
+            android:text="đ3.400.000"
+            android:textColor="#9C2F2F" />
+
+        <TextView
+            android:id="@+id/textmota"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtgiasp"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_toRightOf="@id/imHinhsp"
+            android:text="Mô tả: Động vật trong hình là cái thứ chi đó rất hiếm " />
+
+        <Button
+            android:id="@+id/btmuan"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_below="@id/textmota"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/botrovien"
+            android:onClick="onClick"
+            android:text="Mua Lại"
+            android:textColor="@color/white"
+            android:textAllCaps="false" />
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
