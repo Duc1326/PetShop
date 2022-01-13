@@ -1,13 +1,5 @@
-package com.example.fastfoodapp.utils;
+package com.example.ducluu.petshop.utils;
 
-
-import android.app.Application;
-
-import com.example.fastfoodapp.App.SessionManager;
-import com.example.fastfoodapp.Model.MonAn;
-
-import java.util.HashMap;
-import java.util.List;
 
 public class Utils {
 

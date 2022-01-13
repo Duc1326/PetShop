@@ -60,14 +60,16 @@
             android:hint="Phone number" />
 
         <EditText
-            android:id="@+id/edit_center_password_dangnhap"
+            android:id="@+id/edit_center_password_dangky"
             android:layout_width="350dp"
             android:layout_height="50dp"
             android:layout_marginStart="30dp"
             android:layout_marginTop="140dp"
             android:layout_marginEnd="30dp"
             android:background="@drawable/boder_3"
-            android:hint="Password" />
+            android:hint="Password"
+            android:inputType="textPassword" />
+
         <EditText
             android:id="@+id/edit_center_fogetpassword_dangky"
             android:layout_width="350dp"
@@ -76,7 +78,8 @@
             android:layout_marginTop="210dp"
             android:layout_marginEnd="30dp"
             android:background="@drawable/boder_3"
-            android:hint="Password" />
+            android:hint="Nhập lại passworrd"
+            android:inputType="textPassword" />
 
         <Button
             android:id="@+id/btn_center_login_dangky"

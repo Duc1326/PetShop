@@ -49,7 +49,7 @@
             android:textSize="50dp"
             android:textStyle="bold" />
 
-        <com.google.android.material.textfield.TextInputLayout
+        <EditText
             android:id="@+id/edit_center_user_dangnhap"
             android:layout_width="350dp"
             android:layout_height="50dp"

@@ -1,4 +1,4 @@
-package com.example.fastfoodapp.App;
+package com.example.ducluu.petshop.App;
 
 import android.content.Context;
 

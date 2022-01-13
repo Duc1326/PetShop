@@ -1,27 +1,14 @@
-package com.example.fastfoodapp.App;
+package com.example.ducluu.petshop.App;
 
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 
-import com.example.fastfoodapp.Activity.Home;
-import com.example.fastfoodapp.Activity.Profile;
-import com.example.fastfoodapp.Activity.Signin;
-import com.example.fastfoodapp.R;
+import com.example.ducluu.petshop.views.TrangChu;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
-import java.io.UnsupportedEncodingException;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.net.URLEncoder;
-import java.security.PublicKey;
+import com.example.ducluu.petshop.views.DangNhap;
+
 import java.util.HashMap;
-import java.util.Map;
 
 public class SessionManager {
 
@@ -76,9 +63,9 @@ public class SessionManager {
 
      public void checkLogin(){
         if(!this.isLoggin()){
-            Intent i =new Intent(context, Signin.class);
+            Intent i =new Intent(context, DangNhap.class);
             context.startActivity(i);
-            ((Home)context).finish();
+            ((TrangChu)context).finish();
         }
      }
 //    public void checked(){
@@ -110,18 +97,18 @@ public class SessionManager {
 
         return user;
     }
-    public void Logout(){
-        editor.clear();
-        editor.commit();
-        Intent i =new Intent(context, Signin.class);
-        context.startActivity(i);
-        ((Profile)context).finish();
-    }
+//    public void Logout(){
+//        editor.clear();
+//        editor.commit();
+//        Intent i =new Intent(context, DangNhap.class);
+//        context.startActivity(i);
+//        ((Profile)context).finish();
+//    }
     public void Login(){
         editor.putString("remember","true");
         editor.apply();
-        Intent i =new Intent(context, Home.class);
+        Intent i =new Intent(context, TrangChu.class);
         context.startActivity(i);
-        ((Signin)context).finish();
+        ((DangNhap)context).finish();
     }
 }
