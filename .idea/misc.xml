@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Pet/app/src/main/res/layout/activity_ca_nhan.xml" value="0.15" />
+        <entry key="..\:/Pet/app/src/main/res/layout/activity_dang_ky.xml" value="0.19021739130434784" />
+        <entry key="..\:/Pet/app/src/main/res/layout/activity_nguoi_dung.xml" value="0.19746376811594202" />
+        <entry key="..\:/Pet/app/src/main/res/layout/activity_san_pham.xml" value="0.2" />
+        <entry key="..\:/Pet/app/src/main/res/layout/activity_thong_tinsp.xml" value="0.16" />
         <entry key="..\:/PetShop/PetShop/app/src/main/res/drawable/button_pressed.xml" value="0.19583333333333333" />
         <entry key="..\:/PetShop/PetShop/app/src/main/res/layout/activi_lichsumuahang.xml" value="0.16666666666666666" />
         <entry key="..\:/PetShop/PetShop/app/src/main/res/layout/activity_ca_nhan.xml" value="0.16485507246376813" />
