@@ -4,8 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Pet/app/src/main/res/drawable/botron_mauhong.xml" value="0.13914473684210527" />
+        <entry key="..\:/Pet/app/src/main/res/layout/activi_lichsumuahang.xml" value="0.12894736842105264" />
+        <entry key="..\:/Pet/app/src/main/res/layout/activiti_phukien.xml" value="0.12894736842105264" />
+        <entry key="..\:/Pet/app/src/main/res/layout/activity_anhvao.xml" value="0.12894736842105264" />
         <entry key="..\:/Pet/app/src/main/res/layout/activity_ca_nhan.xml" value="0.15" />
         <entry key="..\:/Pet/app/src/main/res/layout/activity_dang_ky.xml" value="0.19021739130434784" />
+        <entry key="..\:/Pet/app/src/main/res/layout/activity_dangnhap_dangki.xml" value="0.12894736842105264" />
         <entry key="..\:/Pet/app/src/main/res/layout/activity_nguoi_dung.xml" value="0.19746376811594202" />
         <entry key="..\:/Pet/app/src/main/res/layout/activity_san_pham.xml" value="0.2" />
         <entry key="..\:/Pet/app/src/main/res/layout/activity_thanh_toan.xml" value="0.14" />

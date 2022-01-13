@@ -171,21 +171,21 @@
                     android:textColor="@color/black"
                     android:textSize="25dp" />
 
-                <CheckBox
+                <RadioButton
                     android:id="@+id/checkBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="InternetBanking"
                     android:textSize="20dp"/>
 
-                <CheckBox
+                <RadioButton
                     android:id="@+id/checkBox2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text=" Ví MoMo"
                     android:textSize="20dp"/>
 
-                <CheckBox
+                <RadioButton
                     android:id="@+id/checkBox3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

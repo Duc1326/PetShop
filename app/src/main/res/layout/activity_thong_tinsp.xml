@@ -309,20 +309,20 @@
     <Button
         android:id="@+id/button2"
         android:layout_width="162dp"
-        android:layout_height="32dp"
+        android:layout_height="50dp"
         android:background="@drawable/botrovien"
         android:text="Thêm vào giỏ hàng"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.389"
+        app:layout_constraintHorizontal_bias="0.192"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mota"
-        app:layout_constraintVertical_bias="0.16" />
+        app:layout_constraintVertical_bias="0.17" />
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="94dp"
-        android:layout_height="32dp"
+        android:layout_width="143dp"
+        android:layout_height="48dp"
         android:background="@drawable/botrovien"
         android:text="Mua ngay"
         app:layout_constraintBottom_toBottomOf="parent"
