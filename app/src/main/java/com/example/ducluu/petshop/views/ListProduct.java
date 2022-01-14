@@ -1,34 +1,32 @@
-package com.example.fastfoodapp.Activity;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+package com.example.ducluu.petshop.views;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.fastfoodapp.Adapter.MonAnListAdapter;
-import com.example.fastfoodapp.Model.MonAn;
-import com.example.fastfoodapp.R;
-import com.example.fastfoodapp.databinding.ActivityListProductBinding;
-import com.example.fastfoodapp.utils.Utils;
+import com.example.ducluu.petshop.R;
+import com.example.ducluu.petshop.adapter.MonAnListAdapter;
+import com.example.ducluu.petshop.databinding.ActivityListProductBinding;
+import com.example.ducluu.petshop.model.MonAn;
+import com.example.ducluu.petshop.utils.Utils;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class ListProduct extends AppCompatActivity {
 
@@ -37,8 +35,8 @@ public class ListProduct extends AppCompatActivity {
     TextView btnBackList;
     CardView cardView;
 
-    String urlBase= Utils.BASE_URL;
-    String url = Utils.BASE_URL+"Android/list_product/product.php";
+    String urlBase= Utils.BASE_URL.concat("Laptrinhdidong_T7/");
+    String url = Utils.BASE_URL+"Laptrinhdidong_T7/Android/list_product/product.php";
 
     MonAnListAdapter monAnListAdapter;
     RecyclerView recyclerView;
@@ -81,9 +79,7 @@ public class ListProduct extends AppCompatActivity {
                         getMonAnAdapter.setSao(jsonObject.getDouble("star"));
                         getMonAnAdapter.setMoTa(jsonObject.getString("description"));
                         getMonAnAdapter.setCalories(jsonObject.getInt("calories"));
-
                         getMonAnAdapter.setMaSP(jsonObject.getInt("id_food"));
-
 
                         getMonAnAdapter.setHinhMon(urlBase.concat(jsonObject.getString("imgFood")));
 
@@ -107,26 +103,21 @@ public class ListProduct extends AppCompatActivity {
         requestQueue.add(request);
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_right);
 
-    }
 
     private void cainaylaNut() {
         btnBackList=(TextView) findViewById(R.id.btnBackList);
         btnBackList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(ListProduct.this, Home.class));
+                startActivity(new Intent(ListProduct.this, TrangChu.class));
             }
         });
         cardView=(CardView) findViewById(R.id.cardView);
         cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(ListProduct.this, MyCart.class));
+                startActivity(new Intent(ListProduct.this, TrangChu.class));
             }
         });
     }

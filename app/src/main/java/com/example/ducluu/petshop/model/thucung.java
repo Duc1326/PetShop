@@ -1,37 +1,45 @@
 package com.example.ducluu.petshop.model;
 
-public class thucung {
-    public String mathu;
-    public String maloai;
+import java.io.Serializable;
+
+public class thucung implements Serializable {
+    public int id;
+    public String maTL;
     public String tenthu;
-    public int gia;
-    public int soluong;
-    private int Hinh;
+    public String giong;
+    public String gioiting;
+    private String cannang;
+    private String chieucao;
+    private int tuoi;
+    private int soluong;
+    private String mota;
+    private String hinhMon;
+    private int giatien;
 
+    private int numberInCard;
 
-    public thucung(String mathu, String maloai, String tenthu, int gia, int soluong, int hinh) {
-        this.mathu = mathu;
-        this.maloai = maloai;
-        this.tenthu = tenthu;
-        this.gia = gia;
-        this.soluong = soluong;
-        Hinh = hinh;
+    public String getHinhMon() {
+        return hinhMon;
     }
 
-    public String getMathu() {
-        return mathu;
+    public void setHinhMon(String hinhMon) {
+        this.hinhMon = hinhMon;
     }
 
-    public void setMathu(String mathu) {
-        this.mathu = mathu;
+    public int getId() {
+        return id;
     }
 
-    public String getMaloai() {
-        return maloai;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public void setMaloai(String maloai) {
-        this.maloai = maloai;
+    public String getMaTL() {
+        return maTL;
+    }
+
+    public void setMaTL(String maTL) {
+        this.maTL = maTL;
     }
 
     public String getTenthu() {
@@ -42,12 +50,44 @@ public class thucung {
         this.tenthu = tenthu;
     }
 
-    public int getGia() {
-        return gia;
+    public String getGiong() {
+        return giong;
     }
 
-    public void setGia(int gia) {
-        this.gia = gia;
+    public void setGiong(String giong) {
+        this.giong = giong;
+    }
+
+    public String getGioiting() {
+        return gioiting;
+    }
+
+    public void setGioiting(String gioiting) {
+        this.gioiting = gioiting;
+    }
+
+    public String getCannang() {
+        return cannang;
+    }
+
+    public void setCannang(String cannang) {
+        this.cannang = cannang;
+    }
+
+    public String getChieucao() {
+        return chieucao;
+    }
+
+    public void setChieucao(String chieucao) {
+        this.chieucao = chieucao;
+    }
+
+    public int getTuoi() {
+        return tuoi;
+    }
+
+    public void setTuoi(int tuoi) {
+        this.tuoi = tuoi;
     }
 
     public int getSoluong() {
@@ -58,11 +98,28 @@ public class thucung {
         this.soluong = soluong;
     }
 
-    public int getHinh() {
-        return Hinh;
+    public String getMota() {
+        return mota;
     }
 
-    public void setHinh(int hinh) {
-        Hinh = hinh;
+    public void setMota(String mota) {
+        this.mota = mota;
+    }
+
+
+    public int getNumberInCard() {
+        return numberInCard;
+    }
+
+    public void setNumberInCard(int numberInCard) {
+        this.numberInCard = numberInCard;
+    }
+
+    public int getGiatien() {
+        return giatien;
+    }
+
+    public void setGiatien(int giatien) {
+        this.giatien = giatien;
     }
 }

@@ -1,8 +1,8 @@
-package com.example.fastfoodapp.Model;
+package com.example.ducluu.petshop.model;
 
 import java.io.Serializable;
 
-public class MonAn  implements Serializable {
+public class MonAn implements Serializable {
 
     private int maSP;
     private String tenMon;

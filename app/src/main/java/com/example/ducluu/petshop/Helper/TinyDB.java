@@ -19,7 +19,7 @@
  *  and unicode 2017 that are used for separating the items in a list.
  */
 
-package com.example.fastfoodapp.Helper;
+package com.example.ducluu.petshop.Helper;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -31,7 +31,7 @@ import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.example.fastfoodapp.Model.MonAn;
+import com.example.ducluu.petshop.model.MonAn;
 import com.google.gson.Gson;
 
 import java.io.File;
@@ -482,9 +482,9 @@ public class TinyDB {
      * @param obj is the Object you want to put
      */
     public void putObject(String key, Object obj){
-    	checkForNullKey(key);
-    	Gson gson = new Gson();
-    	putString(key, gson.toJson(obj));
+        checkForNullKey(key);
+        Gson gson = new Gson();
+        putString(key, gson.toJson(obj));
     }
 
     public void putListObject(String key, ArrayList<MonAn> playerList){

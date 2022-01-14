@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.example.ducluu.petshop.R;
 
@@ -44,13 +43,11 @@ public class GioHangAdapter extends BaseAdapter {
         view =inflater.inflate(layout,null);
 
         //ánh xạ view
-        TextView txtTen= (TextView) view.findViewById(R.id.textten);
-        TextView txtGia = (TextView) view.findViewById(R.id.textgia);
+
         ImageView imgHinh = (ImageView) view.findViewById(R.id.imHinh);
 
         spGioHang sp =spGioHangList.get(i);
-        txtTen.setText(sp.getTen());
-        txtGia.setText(sp.getGia());
+
         imgHinh.setImageResource(sp.getHinh());
         return view;
     }

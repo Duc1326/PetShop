@@ -15,8 +15,8 @@
         <ImageView
 
             android:id="@+id/imHinhsp"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginTop="18dp"
             android:background="@drawable/cho1" />
 
@@ -55,11 +55,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/txtgiasp"
-            android:layout_margin="2dp"
             android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
             android:layout_marginEnd="2dp"
             android:layout_marginBottom="2dp"
             android:layout_toRightOf="@id/imHinhsp"
+            android:paddingLeft="10dp"
             android:text="Mô tả: Động vật trong hình là cái thứ chi đó rất hiếm " />
 
         <Button
@@ -70,9 +71,9 @@
             android:layout_toLeftOf="@id/btmuan"
             android:background="@drawable/botrovien"
             android:onClick="onClick"
-            android:textColor="@color/white"
             android:text="+Giỏ hàng"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/btmuan"
@@ -83,8 +84,8 @@
             android:background="@drawable/botrovien"
             android:onClick="onClick"
             android:text="Mua ngay"
-            android:textColor="@color/white"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
     </RelativeLayout>
 
 

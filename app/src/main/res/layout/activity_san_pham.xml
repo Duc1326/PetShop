@@ -96,27 +96,12 @@
             tools:ignore="OnClick" />
 
     </LinearLayout>
-    <ListView
-        android:layout_weight="7.6"
-        android:id="@+id/lvSanPham"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/lvmonan"
         android:layout_width="match_parent"
-        android:layout_height="0px"
-        android:background="#F8F8A0"
-        android:layout_above="@id/bottom_navigation">
+        android:layout_height="500dp"
+        tools:listitem="@layout/layout_monan" />
 
-
-    </ListView>
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
-        android:layout_weight="0.8"
-        app:itemIconSize="30dp"
-        app:itemIconTint="@color/color_bar"
-        android:layout_width="match_parent"
-        android:layout_height="0px"
-        android:layout_alignParentBottom="true"
-        android:background="#fff"
-        app:menu="@menu/bottom_nav_menu" />
 
 
 </LinearLayout>

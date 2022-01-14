@@ -1,9 +1,5 @@
 package com.example.ducluu.petshop.views;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager.widget.ViewPager;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -12,6 +8,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
 
 import com.example.ducluu.petshop.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -63,7 +63,7 @@ public class TrangChu extends AppCompatActivity {
                         startActivity(giohang);
                         break;
                     case R.id.navigation_chat:
-                        Intent trochuyen = new Intent(TrangChu.this,TroChuyen.class);
+                        Intent trochuyen = new Intent(TrangChu.this,ListProduct.class);
                         startActivity(trochuyen);
                         break;
                     case R.id.navigation_notifications:

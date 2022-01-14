@@ -1,8 +1,5 @@
 package com.example.ducluu.petshop.views;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
@@ -12,10 +9,23 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.ducluu.petshop.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 
@@ -60,7 +70,7 @@ public class ThuocThuY extends AppCompatActivity {
             }
         });
         button = (Button) findViewById(R.id.btn);
-        anhxathuoccho();
+        anhxathuocca();
         adapter = new SanPhamAdapter(this,R.layout.dong_sanpham,arraySP);
         lviewSanPham.setAdapter(null);
         lviewSanPham.setAdapter(adapter);
@@ -145,14 +155,59 @@ public class ThuocThuY extends AppCompatActivity {
     private void anhxathuocca() {
         lviewSanPham = (ListView) findViewById(R.id.lvSanPham);
         arraySP = new ArrayList<>();
-        arraySP.add(new spSanPham("Thuốc trị Nấm da", "đ1.500.000", "trị tất cả nấm da cho cá cảnh", R.drawable.thuocca1));
-        arraySP.add(new spSanPham("Thuốc trị Nấm da", "đ1.500.000", "trị tất cả nấm da cho cá cảnh", R.drawable.thuocca1));
-        arraySP.add(new spSanPham("Thuốc trị Nấm da", "đ1.500.000", "trị tất cả nấm da cho cá cảnh", R.drawable.thuocca1));
-        arraySP.add(new spSanPham("Thuốc trị Nấm da", "đ1.500.000", "trị tất cả nấm da cho cá cảnh", R.drawable.thuocca1));
-        arraySP.add(new spSanPham("Thuốc trị Nấm da", "đ1.500.000", "trị tất cả nấm da cho cá cảnh", R.drawable.thuocca1));
-        arraySP.add(new spSanPham("Thuốc trị Nấm da", "đ1.500.000", "trị tất cả nấm da cho cá cảnh", R.drawable.thuocca1));
-        arraySP.add(new spSanPham("Thuốc trị Nấm da", "đ1.500.000", "trị tất cả nấm da cho cá cảnh", R.drawable.thuocca1));
-        arraySP.add(new spSanPham("Thuốc trị Nấm da", "đ1.500.000", "trị tất cả nấm da cho cá cảnh", R.drawable.thuocca1));
+
+        RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
+        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest("http://192.168.1.8/Laptrinhdidong_T7/shopthucung/sanpham/thucho.php",
+                new Response.Listener<JSONArray>() {
+                    @Override
+                    public void onResponse(JSONArray response) {
+                        if(response != null){
+                            int ID = 0;
+                            String MaTL = "";
+                            String Tenthu ="";
+                            String giong = "";
+                            String gioiting ="";
+                            String cannang="";
+                            String chieucao="";
+                            int tuoi=0;
+                            int soluong=0;
+                            String mota="";
+                            String hinhanh="";
+                            int giatien=0;
+                            Toast.makeText(ThuocThuY.this, response.toString(),Toast.LENGTH_SHORT).show();
+
+                            for (int i=0;i<response.length();i++) {
+                                try {
+                                    JSONObject jsonObject = response.getJSONObject(i);
+                                    ID = jsonObject.getInt("Id");
+                                    MaTL = jsonObject.getString("MaTL");
+                                    Tenthu = jsonObject.getString("Ten");
+                                    giong = jsonObject.getString("Giong");
+                                    gioiting = jsonObject.getString("GioiTinh");
+                                    cannang = jsonObject.getString("CanNang");
+                                    chieucao = jsonObject.getString("ChieuCao");
+                                    tuoi = jsonObject.getInt("Tuoi");
+                                    soluong = jsonObject.getInt("soluong");
+                                    mota = jsonObject.getString("MoTa");
+                                    hinhanh = jsonObject.getString("HinhAnh");
+                                    giatien = jsonObject.getInt("GiaTien");
+
+                                    arraySP.add(new spSanPham(Tenthu.toString(), Tenthu.toString(), mota.toString(), R.drawable.thuocca1));
+
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+
+                        }
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+            }
+        });
+        requestQueue.add(jsonArrayRequest);
     }
     private void anhxathuocchim() {
         lviewSanPham = (ListView) findViewById(R.id.lvSanPham);

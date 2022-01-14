@@ -94,11 +94,11 @@ public class DangKy extends AppCompatActivity {
             @Override
             public void onResponse(String response) {
 
-                if(response.equals("Đăng kí thành công")){
-                    Toast.makeText(DangKy.this, "Bạn đã đăng kí thành công", Toast.LENGTH_SHORT).show();
+                if(response.equals("")){
+
                     startActivity(new Intent(DangKy.this,DangNhap.class));
                     progressDialog.dismiss();
-                    finish();
+
                 }else{
                     progressDialog.dismiss();
                     Toast.makeText(DangKy.this, response, Toast.LENGTH_SHORT).show();
