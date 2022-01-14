@@ -28,7 +28,7 @@ public class SanPham extends AppCompatActivity {
 
      ActivitySanPhamBinding binding;
     String urlBase= Utils.BASE_URL;
-    String url = Utils.BASE_URL+"Laptrinhdidong_T7/Android/list_product/product.php";
+    String url = Utils.BASE_URL+"Laptrinhdidong_T7/shopthucung/sanpham/thucho.php";
 
     thucungchoAdapter thucungchoAdapter;
     RecyclerView recyclerView;
