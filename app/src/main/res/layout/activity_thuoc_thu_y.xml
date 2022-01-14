@@ -33,66 +33,95 @@
             android:layout_alignParentTop="true"/>
     </LinearLayout>
 
-    <TextView
-        android:paddingLeft="10dp"
-        android:layout_weight="0.1"
-        android:background="#F8F8A0"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text=">Thuốc thú y"
-        android:textSize="17sp"/>
+
     <LinearLayout
-        android:layout_weight="0.6"
+
         android:layout_width="match_parent"
-        android:layout_height="0px"
+        android:layout_height="120dp"
         android:orientation="horizontal"
         android:background="#F8F8A0"
         android:gravity="center"
         >
-        <Button
-            android:id="@+id/btn"
-            android:layout_width="80dp"
-            android:layout_height="30dp"
-            android:text="Chó"
-            android:textColor="#000000"
-            android:textAllCaps="false"
-            android:onClick="onClick"
-            android:background="@drawable/button_pressed"
-            tools:ignore="OnClick" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/btn1"
-            android:layout_width="80dp"
-            android:layout_height="30dp"
-            android:layout_marginLeft="20dp"
-            android:text="Mèo"
-            android:textColor="#000000"
-            android:textAllCaps="false"
-            android:onClick="onClick"
-            android:background="@drawable/button_pressed"
-            tools:ignore="OnClick" />
-        <Button
-            android:id="@+id/btn2"
-            android:layout_width="80dp"
-            android:layout_height="30dp"
-            android:layout_marginLeft="20dp"
-            android:text="Chim"
-            android:textColor="#000000"
-            android:textAllCaps="false"
-            android:onClick="onClick"
-            android:background="@drawable/button_pressed"
-            tools:ignore="OnClick" />
-        <Button
-            android:id="@+id/btn3"
-            android:layout_width="80dp"
-            android:layout_height="30dp"
-            android:layout_marginLeft="20dp"
-            android:text="Cá"
-            android:textColor="#000000"
-            android:textAllCaps="false"
-            android:onClick="onClick"
-            android:background="@drawable/button_pressed"
-            tools:ignore="OnClick" />
+            <ImageButton
+                android:id="@+id/imagebtn_seacherdog_tramhchu"
+                android:layout_width="80dp"
+                android:layout_height="100dp"
+                android:src="@drawable/seacher_dog" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="27dp"
+                android:layout_marginTop="70dp"
+                android:text="Dog"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/imagebtn_seachercat_trangchu"
+                android:layout_width="80dp"
+                android:layout_height="100dp"
+                android:src="@drawable/seacher_cat" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="27dp"
+                android:layout_marginTop="70dp"
+                android:text="Cat"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/imagebtn_seacher_bird_trangchu"
+                android:layout_width="80dp"
+                android:layout_height="100dp"
+                android:src="@drawable/seacher_bird" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="27dp"
+                android:layout_marginTop="70dp"
+                android:text="Bird"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/imgagebtn_seacher_fish_trangchu"
+                android:layout_width="80dp"
+                android:layout_height="100dp"
+                android:src="@drawable/seacher_fish" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="27dp"
+                android:layout_marginTop="70dp"
+                android:text="Fish"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+        </RelativeLayout>
 
     </LinearLayout>
     <ListView
