@@ -10,29 +10,66 @@
     android:layout_weight="10"
     android:orientation="vertical">
 
-    <LinearLayout
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0px"-->
+<!--        android:background="#F8F8A0"-->
+<!--        android:layout_weight="0.8">-->
+<!--        <EditText-->
+<!--            android:focusableInTouchMode="false"-->
+<!--            android:paddingLeft="20dp"-->
+<!--            android:paddingRight="15dp"-->
+<!--            android:layout_marginTop="17dp"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_marginRight="10dp"-->
+<!--            android:id="@+id/edtexttim"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="Tìm kiếm"-->
+<!--            android:textSize="14sp"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:background="@drawable/botext"-->
+<!--            android:drawableRight="@drawable/iconseach"-->
+<!--            android:layout_alignParentTop="true"/>-->
+<!--    </LinearLayout>-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
         android:layout_width="match_parent"
-        android:layout_height="0px"
-        android:background="#F8F8A0"
-        android:layout_weight="0.8">
-        <EditText
-            android:focusableInTouchMode="false"
-            android:paddingLeft="20dp"
-            android:paddingRight="15dp"
-            android:layout_marginTop="17dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:id="@+id/edtexttim"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Tìm kiếm"
-            android:textSize="14sp"
-            android:textColor="@color/black"
-            android:background="@drawable/botext"
-            android:drawableRight="@drawable/iconseach"
-            android:layout_alignParentTop="true"/>
-    </LinearLayout>
+        android:layout_height="60dp"
+        app:cardBackgroundColor="#F8F8A0"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
+        <TextView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/lato_bold"
+            android:text="Thuốc Thú Y"
+            android:textColor="@color/black"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="355dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/ic_baseline_search_24" />
+    </androidx.cardview.widget.CardView>
 
     <LinearLayout
 
@@ -124,16 +161,12 @@
         </RelativeLayout>
 
     </LinearLayout>
-    <ListView
-        android:layout_weight="7.6"
-        android:id="@+id/lvSanPham"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/lvmonan"
         android:layout_width="match_parent"
-        android:layout_height="0px"
-        android:layout_above="@id/bottom_navigation"
-        android:background="#F8F8A0">
+        android:layout_height="500dp"
+        tools:listitem="@layout/layout_monan" />
 
-
-    </ListView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
