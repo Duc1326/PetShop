@@ -28,7 +28,7 @@ public class SanPham extends AppCompatActivity {
 
      ActivitySanPhamBinding binding;
     String urlBase= Utils.BASE_URL;
-    String url = Utils.BASE_URL+"Laptrinhdidong_T7/shopthucung/sanpham/thucho.php";
+    String url = Utils.BASE_URL+"Laptrinhdidong_T7/Android/list_product/product.php";
 
     thucungchoAdapter thucungchoAdapter;
     RecyclerView recyclerView;
@@ -178,13 +178,11 @@ public class SanPham extends AppCompatActivity {
                         getMonAnAdapter.setTenthu(jsonObject.getString("Ten"));
                         getMonAnAdapter.setGiatien(jsonObject.getInt("GiaTien"));
                         getMonAnAdapter.setSoluong(jsonObject.getInt("soluong"));
-                        getMonAnAdapter.setMota(jsonObject.getString("Mota"));
+                        getMonAnAdapter.setMota(jsonObject.getString("MoTa"));
                         getMonAnAdapter.setTuoi(jsonObject.getInt("Tuoi"));
-
                         getMonAnAdapter.setId(jsonObject.getInt("Id"));
 
-
-                        getMonAnAdapter.setHinhMon(urlBase.concat(jsonObject.getString("HinhAnh")));
+                        getMonAnAdapter.setHinhMon(jsonObject.getString("HinhAnh"));
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }

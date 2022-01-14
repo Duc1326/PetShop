@@ -74,15 +74,13 @@ public class ListProduct extends AppCompatActivity {
                     try {
                         jsonObject = response.getJSONObject(i);
 
-                        getMonAnAdapter.setTenMon(jsonObject.getString("nameFood"));
-                        getMonAnAdapter.setGia(jsonObject.getInt("price"));
-                        getMonAnAdapter.setSao(jsonObject.getDouble("star"));
-                        getMonAnAdapter.setMoTa(jsonObject.getString("description"));
-                        getMonAnAdapter.setCalories(jsonObject.getInt("calories"));
-                        getMonAnAdapter.setMaSP(jsonObject.getInt("id_food"));
-
-                        getMonAnAdapter.setHinhMon(urlBase.concat(jsonObject.getString("imgFood")));
-
+                        getMonAnAdapter.setTenMon(jsonObject.getString("Ten"));
+                        getMonAnAdapter.setGia(jsonObject.getInt("GiaTien"));
+                        getMonAnAdapter.setSao(jsonObject.getDouble("soluong"));
+                        getMonAnAdapter.setMoTa(jsonObject.getString("MoTa"));
+                        getMonAnAdapter.setCalories(jsonObject.getInt("Tuoi"));
+                        getMonAnAdapter.setMaSP(jsonObject.getInt("Id"));
+                        getMonAnAdapter.setHinhMon(jsonObject.getString("HinhAnh"));
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }

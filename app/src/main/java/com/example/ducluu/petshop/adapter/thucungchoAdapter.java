@@ -48,7 +48,7 @@ public class thucungchoAdapter extends RecyclerView.Adapter<thucungchoAdapter.Vi
 
         Glide.with(context)
                 .load(thucungArrayList.get(position).getHinhMon())
-                .into(holder.imgFood);
+                .into(holder.imganh);
 
         holder.tvName.setText(thucungArrayList.get(position).getTenthu());
         holder.tvStar.setText(String.valueOf(thucungArrayList.get(position).getSoluong()));
@@ -81,13 +81,13 @@ public class thucungchoAdapter extends RecyclerView.Adapter<thucungchoAdapter.Vi
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        ImageView imgFood;
+        ImageView imganh;
         TextView tvName, tvPrice, tvStar;
         Button btn_add;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            imgFood = (ImageView) itemView.findViewById(R.id.imageviewAnh);
+            imganh = (ImageView) itemView.findViewById(R.id.imageviewAnh);
             tvName = (TextView) itemView.findViewById(R.id.name);
             tvPrice = (TextView) itemView.findViewById(R.id.gia);
             tvStar = (TextView) itemView.findViewById(R.id.star);
