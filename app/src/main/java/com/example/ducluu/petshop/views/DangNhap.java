@@ -45,7 +45,7 @@ public class DangNhap extends AppCompatActivity {
     String username, password;
     EditText user, pass;
 
-    String url = Utils.BASE_URL + "Laptrinhdidong_T7/shopthucung/canhan/account.php";
+    String url = Utils.BASE_URL + "/shopthucung/shopthucung/canhan/account.php";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

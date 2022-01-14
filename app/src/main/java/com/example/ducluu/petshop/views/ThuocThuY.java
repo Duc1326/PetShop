@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -69,14 +70,14 @@ public class ThuocThuY extends AppCompatActivity {
                 return true;
             }
         });
-        button = (Button) findViewById(R.id.btn);
+        button = (ImageButton)findViewById(R.id.imgagebtn_seacher_fish_trangchu);
         anhxathuocca();
         adapter = new SanPhamAdapter(this,R.layout.dong_sanpham,arraySP);
         lviewSanPham.setAdapter(null);
         lviewSanPham.setAdapter(adapter);
         button.setBackground(Drawable.createFromPath("#FE9D9D"));
     }
-    Button button;
+    ImageButton button;
     ListView lviewSanPham;
     ArrayList<spSanPham> arraySP;
     SanPhamAdapter adapter;
@@ -87,14 +88,14 @@ public class ThuocThuY extends AppCompatActivity {
         dr.setColorFilter(Color.parseColor("#FE9D9D"), PorterDuff.Mode.SRC_ATOP);
 
         switch (v.getId()) {
-            case R.id.btn:
+            case R.id.imagebtn_seacherdog_tramhchu:
 
                 if (button == null) {
-                    button = (Button) findViewById(v.getId());
+                    button = (ImageButton) findViewById(v.getId());
 
                 } else {
                     button.setBackgroundResource(R.drawable.button_pressed);
-                    button = (Button) findViewById(v.getId());
+                    button = (ImageButton) findViewById(v.getId());
                     anhxathuoccho();
                     adapter = new SanPhamAdapter(this,R.layout.dong_sanpham,arraySP);
                     lviewSanPham.setAdapter(null);
@@ -104,13 +105,13 @@ public class ThuocThuY extends AppCompatActivity {
 
                 break;
 
-            case R.id.btn1:
+            case R.id.imagebtn_seachercat_trangchu:
                 if (button == null) {
-                    button = (Button) findViewById(v.getId());
+                    button = (ImageButton) findViewById(v.getId());
 
                 } else {
                     button.setBackgroundResource(R.drawable.button_pressed);
-                    button = (Button) findViewById(v.getId());
+                    button = (ImageButton) findViewById(v.getId());
                     anhxathuocmeo();
                     adapter = new SanPhamAdapter(this,R.layout.dong_sanpham,arraySP);
                     lviewSanPham.setAdapter(null);
@@ -119,12 +120,12 @@ public class ThuocThuY extends AppCompatActivity {
                 button.setBackgroundDrawable(dr);
 
                 break;
-            case R.id.btn2:
+            case R.id.imagebtn_seacher_bird_trangchu:
                 if (button == null) {
-                    button = (Button) findViewById(v.getId());
+                    button = (ImageButton) findViewById(v.getId());
                 } else {
                     button.setBackgroundResource(R.drawable.button_pressed);
-                    button = (Button) findViewById(v.getId());
+                    button = (ImageButton) findViewById(v.getId());
                     anhxathuocchim();
                     adapter = new SanPhamAdapter(this,R.layout.dong_sanpham,arraySP);
                     lviewSanPham.setAdapter(null);
@@ -133,12 +134,12 @@ public class ThuocThuY extends AppCompatActivity {
                 button.setBackgroundDrawable(dr);
 
                 break;
-            case R.id.btn3:
+            case R.id.imgagebtn_seacher_fish_trangchu:
                 if (button == null) {
-                    button = (Button) findViewById(v.getId());
+                    button = (ImageButton) findViewById(v.getId());
                 } else {
                     button.setBackgroundResource(R.drawable.button_pressed);
-                    button = (Button) findViewById(v.getId());
+                    button = (ImageButton) findViewById(v.getId());
                     anhxathuocca();
                     adapter = new SanPhamAdapter(this,R.layout.dong_sanpham,arraySP);
                     lviewSanPham.setAdapter(null);
