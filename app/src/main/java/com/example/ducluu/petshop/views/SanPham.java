@@ -1,10 +1,13 @@
 package com.example.ducluu.petshop.views;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -21,6 +24,8 @@ import com.example.ducluu.petshop.databinding.ActivitySanPhamBinding;
 import com.example.ducluu.petshop.model.MonAn;
 import com.example.ducluu.petshop.model.thucung;
 import com.example.ducluu.petshop.utils.Utils;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -45,6 +50,7 @@ public class SanPham extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         binding = ActivitySanPhamBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
@@ -55,6 +61,7 @@ public class SanPham extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
         call_json();
         getViews();
+
 
 
 //        Intent intent = getIntent();
