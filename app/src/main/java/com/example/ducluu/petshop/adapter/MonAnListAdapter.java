@@ -1,6 +1,7 @@
 package com.example.ducluu.petshop.adapter;
 
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -47,9 +48,18 @@ public class MonAnListAdapter extends RecyclerView.Adapter<MonAnListAdapter.View
         ViewHolder viewHolder = new ViewHolder(view);
         return viewHolder;
     }
+    public void clearApplications() {
+        int size = this.monAnList.size();
+        if (size > 0) {
+            for (int i = 0; i < size; i++) {
+                monAnList.remove(0);
+            }
 
+            this.notifyItemRangeRemoved(0, size);
+        }
+    }
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
 
         Glide.with(context)
                 .load(monAnList.get(position).getHinhMon())
