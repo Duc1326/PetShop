@@ -40,7 +40,7 @@ public class CaNhan extends AppCompatActivity {
     String getId;
     private ManagementCard managementCard;
     SessionManager sessionManager;
-    String url = Utils.BASE_URL + "/shopthucung/profile/read_detail.php";
+    String url = Utils.BASE_URL + "Laptrinhdidong_T7/shopthucung/profile/read_detail.php";
     TextView tenkh,emailkh,sdtkh,ngaysinhkh,diachikh;
     Button btnsua;
     @Override
@@ -64,6 +64,14 @@ public class CaNhan extends AppCompatActivity {
 
             }
         });
+
+        btnsua.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CaNhan.this, SuaCaNhan.class);
+                startActivity(intent);
+            }
+        });
     }
     private void getUserDetail() {
         final ProgressDialog progressDialog = new ProgressDialog(this);
@@ -84,9 +92,9 @@ public class CaNhan extends AppCompatActivity {
                     if (success.equals("1")) {
                         for (int i = 0; i < jsonArray.length(); i++) {
                             JSONObject object = jsonArray.getJSONObject(i);
-
                             String F_name = object.getString("name").trim();
                             String F_phone = object.getString("phone").trim();
+                            String F_ngaysinh = object.getString("dateofbirth");
                             String F_address = object.getString("address").trim();
                             String F_email = object.getString("email").trim();
 
@@ -94,6 +102,7 @@ public class CaNhan extends AppCompatActivity {
                             sdtkh.setText(F_phone);
                             diachikh.setText(F_address);
                             emailkh.setText(F_email);
+                            ngaysinhkh.setText(F_ngaysinh);
 
                         }
                     }
@@ -137,7 +146,6 @@ public class CaNhan extends AppCompatActivity {
         diachikh=(TextView) findViewById(R.id.diachi);
         btnsua= (Button) findViewById(R.id.btn_sua);
     }
-
 
 
 }

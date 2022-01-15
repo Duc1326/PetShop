@@ -49,7 +49,7 @@ public class DangNhap extends AppCompatActivity {
     EditText user, pass;
     SessionManager sessionManager;
     SharedPreferences sharedPreferences;
-    String url = Utils.BASE_URL + "/shopthucung/canhan/account.php";
+    String url = Utils.BASE_URL + "Laptrinhdidong_T7/shopthucung/canhan/account.php";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
