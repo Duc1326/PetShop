@@ -19,9 +19,6 @@
             android:name=".views.MyOrder"
             android:exported="true" />
         <activity
-            android:name=".views.ShowDetail"
-            android:exported="true" />
-        <activity
             android:name=".views.ListProduct"
             android:exported="true" />
         <activity

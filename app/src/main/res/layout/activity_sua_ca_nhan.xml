@@ -197,7 +197,7 @@
             android:layout_height="50dp"
             android:layout_marginLeft="200dp"
             android:layout_marginTop="50dp"
-            android:background="@drawable/boder_7"
+            android:background="@drawable/boder_8"
             android:text="Lưu"
             android:textColor="@color/black"
             android:textAllCaps="false"

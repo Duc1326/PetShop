@@ -27,9 +27,9 @@
 
         <ImageView
             android:id="@+id/minusBtn"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:src="@drawable/minus" />
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/subtract14" />
 
         <TextView
             android:id="@+id/soluong"
@@ -46,9 +46,9 @@
 
         <ImageView
             android:id="@+id/plusBtn"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:src="@drawable/plus" />
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/add14" />
     </LinearLayout>
 
     <TextView

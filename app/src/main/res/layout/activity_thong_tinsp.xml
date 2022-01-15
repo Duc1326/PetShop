@@ -18,7 +18,7 @@
             android:id="@+id/toolbarDetail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#FE9D9D"
+            android:background="#FF77A7"
             app:title="Chi Tiết Sản Phẩm"
             app:titleTextColor="@color/white" />
 
@@ -224,7 +224,7 @@
         android:id="@+id/addCart"
         android:layout_width="match_parent"
         android:layout_height="61dp"
-        app:cardBackgroundColor="#FE9D9D"
+        app:cardBackgroundColor="#FF77A7"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
