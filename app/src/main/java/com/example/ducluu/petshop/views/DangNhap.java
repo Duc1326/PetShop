@@ -4,7 +4,9 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -24,6 +26,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.ducluu.petshop.App.SessionManager;
 import com.example.ducluu.petshop.R;
 import com.example.ducluu.petshop.model.account;
 import com.example.ducluu.petshop.utils.Utils;
@@ -44,12 +47,15 @@ public class DangNhap extends AppCompatActivity {
     TextView  foget_pass;
     String username, password;
     EditText user, pass;
-
+    SessionManager sessionManager;
+    SharedPreferences sharedPreferences;
     String url = Utils.BASE_URL + "Laptrinhdidong_T7/shopthucung/canhan/account.php";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dang_nhap);
+        sharedPreferences = getSharedPreferences("LOGIN", Context.MODE_PRIVATE);
+        sessionManager= new SessionManager(this);
 
         AnhXa();
 
@@ -85,7 +91,18 @@ public class DangNhap extends AppCompatActivity {
                     if (success.equals("1")){
                         for(int i= 0;i<jsonArray.length();i++){
                             JSONObject object = jsonArray.getJSONObject(i);
+                            String name = object.getString("name").trim();
+                            String email = object.getString("email").trim();
+                            String phone = object.getString("phone").trim();
+                            String dateofbirth = object.getString("dateofbirth").trim();
+
+                            String address = object.getString("address").trim();
+                            String addressSpecific = object.getString("addressSpecific").trim();
+                            String id = object.getString("id").trim();
                             Utils.getId  = object.getString("id").trim();
+
+                            sessionManager.createSession(name,email,phone,dateofbirth,id);
+                            sessionManager.createSession2(name,phone,address,addressSpecific,id);
                             progressDialog.dismiss();
                             Toast.makeText(DangNhap.this, "Đăng nhập thành công!", Toast.LENGTH_SHORT).show();
                             Intent trangchu = new Intent(DangNhap.this, TrangChu.class);

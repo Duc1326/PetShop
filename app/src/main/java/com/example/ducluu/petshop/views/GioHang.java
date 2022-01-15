@@ -77,7 +77,7 @@ public class GioHang extends AppCompatActivity {
         btnOrder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(GioHang.this, TrangChu.class));
+                startActivity(new Intent(GioHang.this, MyOrder.class));
             }
         });
 

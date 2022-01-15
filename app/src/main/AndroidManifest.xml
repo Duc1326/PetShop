@@ -16,6 +16,9 @@
             android:name=".views.Lichsumuahang"
             android:exported="true" />
         <activity
+            android:name=".views.MyOrder"
+            android:exported="true" />
+        <activity
             android:name=".views.ShowDetail"
             android:exported="true" />
         <activity
