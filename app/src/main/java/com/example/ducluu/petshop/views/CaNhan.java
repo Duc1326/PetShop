@@ -49,21 +49,21 @@ public class CaNhan extends AppCompatActivity {
         binding = ActivityCaNhanBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-
+        AnhXa();
         sessionManager = new SessionManager(this);
         HashMap<String, String> user = sessionManager.getUserDetail();
         getId = user.get(sessionManager.ID);
         getUserDetail();
         ima_btn_back = findViewById(R.id.image_btn_back_canhan);
 
-//        ima_btn_back.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(CaNhan.this, NguoiDung.class);
-//                startActivity(intent);
-//
-//            }
-//        });
+        ima_btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CaNhan.this, NguoiDung.class);
+                startActivity(intent);
+
+            }
+        });
     }
     private void getUserDetail() {
         final ProgressDialog progressDialog = new ProgressDialog(this);
@@ -88,12 +88,12 @@ public class CaNhan extends AppCompatActivity {
                             String F_name = object.getString("name").trim();
                             String F_phone = object.getString("phone").trim();
                             String F_address = object.getString("address").trim();
-                            String F_addressSpecific = object.getString("addressSpecific").trim();
+                            String F_email = object.getString("email").trim();
 
                             tenkh.setText(F_name);
-                            sdtkh.setText(" _ " + F_phone);
+                            sdtkh.setText(F_phone);
                             diachikh.setText(F_address);
-                            emailkh.setText(F_addressSpecific);
+                            emailkh.setText(F_email);
 
                         }
                     }
