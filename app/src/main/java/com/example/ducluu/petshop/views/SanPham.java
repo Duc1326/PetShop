@@ -1,8 +1,13 @@
 package com.example.ducluu.petshop.views;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -19,6 +24,8 @@ import com.example.ducluu.petshop.databinding.ActivitySanPhamBinding;
 import com.example.ducluu.petshop.model.MonAn;
 import com.example.ducluu.petshop.model.thucung;
 import com.example.ducluu.petshop.utils.Utils;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -28,9 +35,9 @@ import java.util.ArrayList;
 
 public class SanPham extends AppCompatActivity {
 
-     ActivitySanPhamBinding binding;
-    String urlBase= Utils.BASE_URL;
-    String url = Utils.BASE_URL+"/shopthucung/sanpham/thucho.php";
+    ActivitySanPhamBinding binding;
+
+    String url = Utils.BASE_URL+"shopthucung/sanpham/thucho.php";
 
     MonAnListAdapter monAnListAdapter;
     RecyclerView recyclerView;
@@ -38,11 +45,12 @@ public class SanPham extends AppCompatActivity {
     JsonArrayRequest request;
     RequestQueue requestQueue;
     ArrayList<MonAn> monAnList;
-
+    ImageButton bt1,bt2,bt3,bt4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         binding = ActivitySanPhamBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
@@ -52,6 +60,8 @@ public class SanPham extends AppCompatActivity {
         layoutManager =new LinearLayoutManager(SanPham.this,RecyclerView.VERTICAL,false);
         recyclerView.setLayoutManager(layoutManager);
         call_json();
+        getViews();
+
 
 
 //        Intent intent = getIntent();
@@ -78,10 +88,51 @@ public class SanPham extends AppCompatActivity {
 //
 //                break;
 //        }
+        bt1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                monAnListAdapter.clearApplications();
+                recyclerView.setAdapter(monAnListAdapter);
+                url = Utils.BASE_URL+"ltdd/shopthucung/sanpham/thucho.php";
+                call_json();
+            }
+        });
+        bt2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                monAnListAdapter.clearApplications();
+                recyclerView.setAdapter(monAnListAdapter);
+                url = Utils.BASE_URL+"ltdd/shopthucung/sanpham/thumeo.php";
+                call_json();
+            }
+        });
+        bt3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                monAnListAdapter.clearApplications();
+                recyclerView.setAdapter(monAnListAdapter);
+                url = Utils.BASE_URL+"ltdd/shopthucung/sanpham/thuchim.php";
+                call_json();
+            }
+        });
+        bt4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                monAnListAdapter.clearApplications();
+                recyclerView.setAdapter(monAnListAdapter);
+                url = Utils.BASE_URL+"ltdd/shopthucung/sanpham/thuca.php";
+                call_json();
+            }
+        });
 
 
+    }
 
-
+    private void getViews() {
+        bt1 = findViewById(R.id.imagebtn_seacherdog_tramhchu);
+        bt2= findViewById(R.id.imagebtn_seachercat_trangchu);
+        bt3 = findViewById(R.id.imagebtn_seacher_bird_trangchu);
+        bt4 = findViewById(R.id.imgagebtn_seacher_fish_trangchu);
     }
 
 
@@ -215,6 +266,5 @@ public class SanPham extends AppCompatActivity {
 
 
 
-    }
-
+}
 

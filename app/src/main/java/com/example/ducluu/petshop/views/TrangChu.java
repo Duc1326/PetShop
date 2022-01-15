@@ -63,7 +63,7 @@ public class TrangChu extends AppCompatActivity {
                         startActivity(giohang);
                         break;
                     case R.id.navigation_chat:
-                        Intent trochuyen = new Intent(TrangChu.this,ListProduct.class);
+                        Intent trochuyen = new Intent(TrangChu.this,TroChuyen.class);
                         startActivity(trochuyen);
                         break;
                     case R.id.navigation_notifications:
