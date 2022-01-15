@@ -2,11 +2,9 @@ package com.example.ducluu.petshop.views;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -15,60 +13,38 @@ import com.example.ducluu.petshop.Helper.ChangeNumberItemListener;
 import com.example.ducluu.petshop.Helper.ManagementCard;
 import com.example.ducluu.petshop.R;
 import com.example.ducluu.petshop.adapter.GiohangAdapter;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.navigation.NavigationBarView;
+import com.example.ducluu.petshop.databinding.ActivityGiohangBinding;
+import com.example.ducluu.petshop.model.MonAn;
 
 import java.text.NumberFormat;
 import java.util.Locale;
 
 public class GioHang extends AppCompatActivity {
+
+    ActivityGiohangBinding binding;
+    MonAn monAn = null;
+
     TextView btnBack, tvTong, emptyTxt;
     TextView btnOrder;
 
     private RecyclerView.Adapter adapter;
     private RecyclerView recyclerViewList;
     private ManagementCard managementCard;
-
+    GiohangAdapter giohangAdapter;
     String tong_format;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_giohang);
+        binding = ActivityGiohangBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
-        BottomNavigationView bt = findViewById(R.id.bottom_navigation);
+        managementCard = new ManagementCard(this);
 
-        bt.setSelectedItemId(R.id.navigation_cart);
-
-        bt.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-
-                switch (item.getItemId()) {
-                    case R.id.navigation_home:
-                        Intent trangchu = new Intent(GioHang.this, TrangChu.class);
-                        startActivity(trangchu);
-                        break;
-                    case R.id.navigation_cart:
-
-                        break;
-                    case R.id.navigation_chat:
-                        Intent trochuyen = new Intent(GioHang.this, TroChuyen.class);
-                        startActivity(trochuyen);
-                        break;
-                    case R.id.navigation_notifications:
-                        Intent thongbao = new Intent(GioHang.this, ThongBao.class);
-                        startActivity(thongbao);
-                        break;
-                    case R.id.navigation_person:
-                        Intent canhan = new Intent(GioHang.this, NguoiDung.class);
-                        startActivity(canhan);
-                        break;
-                }
-                return true;
-            }
-        });
-
+        cainaylaNut();
+        AnhXa();
+        initList();
+        CalculateCard();
     }
 
     private void initList() {
@@ -101,7 +77,7 @@ public class GioHang extends AppCompatActivity {
         btnOrder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(GioHang.this, ThanhToan.class));
+                startActivity(new Intent(GioHang.this, TrangChu.class));
             }
         });
 
@@ -118,5 +94,4 @@ public class GioHang extends AppCompatActivity {
         tvTong = (TextView) findViewById(R.id.tvTong);
         recyclerViewList = findViewById(R.id.lvGiohang);
     }
-
 }

@@ -1,9 +1,9 @@
-package com.example.fastfoodapp.Helper;
+package com.example.ducluu.petshop.Helper;
 
 import android.content.Context;
 import android.widget.Toast;
 
-import com.example.fastfoodapp.Model.MonAn;
+import com.example.ducluu.petshop.model.MonAn;
 
 import java.util.ArrayList;
 

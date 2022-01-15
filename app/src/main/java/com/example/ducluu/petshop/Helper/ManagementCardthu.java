@@ -3,28 +3,27 @@ package com.example.ducluu.petshop.Helper;
 import android.content.Context;
 import android.widget.Toast;
 
-import com.example.ducluu.petshop.model.MonAn;
 import com.example.ducluu.petshop.model.thucung;
 
 import java.util.ArrayList;
 
-public class ManagementCard {
+public class ManagementCardthu {
 
     private Context context;
-    private TinyDB tinyDB;
+    private TinyDBthu tinyDBthu;
 
-    public ManagementCard(Context context) {
+    public ManagementCardthu(Context context) {
         this.context = context;
-        this.tinyDB = new TinyDB(context);
+        this.tinyDBthu = new TinyDBthu(context);
     }
 
     public void DeleteListCard() {
-        tinyDB.remove("CardList");
+        tinyDBthu.remove("CardList");
     }
 
 
     public ArrayList<thucung> getListCard() {
-        return tinyDB.getListObject("CardList");
+        return tinyDBthu.getListObject("CardList");
     }
 
     public void insertFood(thucung item){
@@ -44,13 +43,13 @@ public class ManagementCard {
             listFood.add(item);
         }
 
-        tinyDB.putListObject("CardList", listFood);
+        tinyDBthu.putListObject("CardList", listFood);
         Toast.makeText(context, "Added to your Cart", Toast.LENGTH_SHORT).show();
     }
 
     public void plusNumberFood(ArrayList<thucung> listfood, int position, ChangeNumberItemListener changeNumberItemListener) {
         listfood.get(position).setNumberInCard(listfood.get(position).getNumberInCard() + 1);
-        tinyDB.putListObject("CardList", listfood);
+        tinyDBthu.putListObject("CardList", listfood);
         changeNumberItemListener.changed();
     }
 
@@ -60,7 +59,7 @@ public class ManagementCard {
         } else {
             listfood.get(position).setNumberInCard(listfood.get(position).getNumberInCard() - 1);
         }
-        tinyDB.putListObject("CardList", listfood);
+        tinyDBthu.putListObject("CardList", listfood);
         changeNumberItemListener.changed();
     }
 

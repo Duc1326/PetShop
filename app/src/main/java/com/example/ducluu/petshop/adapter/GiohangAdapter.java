@@ -4,11 +4,8 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
 import android.widget.ImageView;
-import android.widget.RadioGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -16,8 +13,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.example.ducluu.petshop.Helper.ChangeNumberItemListener;
 import com.example.ducluu.petshop.Helper.ManagementCard;
-import com.example.ducluu.petshop.model.MonAn;
 import com.example.ducluu.petshop.R;
+import com.example.ducluu.petshop.model.MonAn;
 
 import java.text.NumberFormat;
 import java.util.ArrayList;
@@ -39,7 +36,7 @@ public class GiohangAdapter extends RecyclerView.Adapter<GiohangAdapter.ViewHold
     @NonNull
     @Override
     public GiohangAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View intflate = LayoutInflater.from((parent.getContext())).inflate(R.layout.activity_giohang, parent, false);
+        View intflate = LayoutInflater.from((parent.getContext())).inflate(R.layout.layout_giohang, parent, false);
 
         return new ViewHolder(intflate);
     }

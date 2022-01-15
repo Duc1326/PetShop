@@ -4,7 +4,7 @@
     android:layout_marginStart="10dp"
     android:layout_marginTop="10dp"
     android:layout_marginEnd="10dp"
-    android:background="@drawable/edt_find"
+
     android:descendantFocusability="blocksDescendants"
     android:layout_height="wrap_content">
 
@@ -15,7 +15,7 @@
         android:layout_height="80dp"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="5dp"
-        android:src="@drawable/pizza" />
+        android:src="@drawable/anhqc02" />
 
     <LinearLayout
         android:layout_marginLeft="110dp"

@@ -43,13 +43,13 @@ import java.util.Arrays;
 import java.util.Map;
 
 
-public class TinyDB {
+public class TinyDBthu {
 
     private SharedPreferences preferences;
     private String DEFAULT_APP_IMAGEDATA_DIRECTORY;
     private String lastImagePath = "";
 
-    public TinyDB(Context appContext) {
+    public TinyDBthu(Context appContext) {
         preferences = PreferenceManager.getDefaultSharedPreferences(appContext);
     }
 
