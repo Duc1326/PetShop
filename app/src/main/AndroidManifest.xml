@@ -8,68 +8,6 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/petsshoplogo"
         android:supportsRtl="true"
-        android:theme="@style/Theme.PetShop">
-        <activity
-            android:name=".Lichsumuahang"
-            android:exported="true" />
-        <activity
-            android:name=".Dangnhap_Dangki"
-            android:exported="true" />
-        <activity
-            android:name=".DangNhap"
-            android:exported="true" />
-        <activity
-            android:name=".ThongTinsp"
-            android:exported="true" />
-        <activity
-            android:name=".TroChuyen"
-            android:exported="true" />
-        <activity
-            android:name=".ThanhToan"
-            android:exported="true" />
-        <activity
-            android:name=".ThucAn"
-            android:exported="true" />
-        <activity
-            android:name=".ThuocThuY"
-            android:exported="true" />
-        <activity
-            android:name=".SanPham"
-            android:exported="true" />
-        <activity
-            android:name=".CaNhan"
-            android:exported="true" />
-        <activity
-            android:name=".NguoiDung"
-            android:exported="true" />
-        <activity
-            android:name=".DangKy"
-            android:exported="true" />
-        <activity
-            android:name=".ThongBao"
-            android:exported="true" />
-        <activity
-            android:name=".TrangChu"
-            android:exported="true" />
-        <activity
-            android:name=".GioHang"
-            android:exported="true" />
-        <activity
-            android:name=".PhuKien1"
-            android:exported="true" />
-        <activity
-            android:name=".BottomNavigation"
-            android:exported="true"
-            android:label="@string/title_activity_bottom_navigation" />
-        <activity
-            android:name=".Anhvao_activity"
-            android:exported="true"
-            >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-    </application>
+        android:theme="@style/Theme.PetShop"></application>
 
 </manifest>

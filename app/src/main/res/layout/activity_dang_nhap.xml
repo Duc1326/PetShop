@@ -6,13 +6,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/anhnen_dangnhap"
-    tools:context=".DangNhap">
+    tools:context=".views.DangNhap">
 
     <RelativeLayout
         android:id="@+id/top_layout_dangnhap"
         android:layout_width="match_parent"
-        android:layout_height="270dp"
->
+        android:layout_height="270dp">
 
         <ImageButton
             android:id="@+id/image_back_dangnhap"
@@ -44,10 +43,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textColor="@color/mauhong"
-            android:textStyle="bold"
             android:text="Đăng nhập"
-            android:textSize="50dp" />
+            android:textColor="@color/mauhong"
+            android:textSize="50dp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/edit_center_user_dangnhap"
