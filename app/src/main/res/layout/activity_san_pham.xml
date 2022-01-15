@@ -12,9 +12,10 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
         android:background="#F8F8A0"
-       >
+        >
         <EditText
 
             android:paddingLeft="20dp"
@@ -35,9 +36,9 @@
     </LinearLayout>
 
     <LinearLayout
-
+        android:layout_weight="1.7"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:layout_height="0dp"
         android:orientation="horizontal"
         android:background="#F8F8A0"
         android:gravity="center"
@@ -127,8 +128,10 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/lvmonan"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="0dp"
+        android:layout_weight="7.5"
         tools:listitem="@layout/layout_monan" />
+
 
 
 

@@ -7,7 +7,11 @@ android {
 
     defaultConfig {
         applicationId "com.example.ducluu.petshop"
+<<<<<<< HEAD
         minSdk 29
+=======
+        minSdk 26
+>>>>>>> 47ae1ff794f339f3f67c800ce29f2c49aad8276e
         targetSdk 31
         versionCode 1
         versionName "1.0"
