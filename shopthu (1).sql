@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 29, 2021 at 02:00 PM
+-- Generation Time: Jan 15, 2022 at 03:43 AM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.6
 
@@ -24,362 +24,265 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `khachhang`
+-- Table structure for table `chitiethoadon`
 --
 
-CREATE TABLE `khachhang` (
-  `MaKH` varchar(11) COLLATE utf8_unicode_ci NOT NULL,
-  `Ho` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `Ten` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `GioiTinh` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `SDT` int(11) NOT NULL,
-  `Email` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
-  `NgaySinh` date NOT NULL,
-  `DiaChi` varchar(500) COLLATE utf8_unicode_ci NOT NULL
+CREATE TABLE `chitiethoadon` (
+  `MaHD` varchar(11) NOT NULL,
+  `MaSP` varchar(11) NOT NULL,
+  `SoLuong` int(11) NOT NULL,
+  `DonGia` double NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `danhmuc`
+--
+
+CREATE TABLE `danhmuc` (
+  `maDM` varchar(11) NOT NULL,
+  `tenDM` varchar(100) NOT NULL,
+  `mota` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `danhmuc`
+--
+
+INSERT INTO `danhmuc` (`maDM`, `tenDM`, `mota`) VALUES
+('1', 'cho', 'danh muc cho'),
+('2', 'meo', 'danh muc meo'),
+('3', 'ca', 'danh muc ca'),
+('4', 'chim', 'danh muc chim'),
+('5', 'phu kien', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hoadon`
+--
+
+CREATE TABLE `hoadon` (
+  `MaHD` varchar(11) NOT NULL,
+  `MaKH` varchar(11) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `NgayLap` datetime NOT NULL,
+  `SDT` varchar(20) NOT NULL,
+  `DiaChi` varchar(100) NOT NULL,
+  `PhuongThucTT` varchar(20) NOT NULL,
+  `TongTien` float NOT NULL,
+  `TrangThai` varchar(70) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `phanquyen`
+--
+
+CREATE TABLE `phanquyen` (
+  `MaQuyen` int(11) NOT NULL,
+  `TenPhanQuyen` varchar(20) NOT NULL,
+  `ChiTietQuyen` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `theloai`
+--
+
+CREATE TABLE `theloai` (
+  `MaTL` varchar(11) NOT NULL,
+  `MaDM` varchar(11) NOT NULL,
+  `TenTL` varchar(100) NOT NULL,
+  `Mota` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `theloai`
+--
+
+INSERT INTO `theloai` (`MaTL`, `MaDM`, `TenTL`, `Mota`) VALUES
+('1', '1', 'san pham cho', NULL),
+('10', '4', 'thu chim', NULL),
+('11', '4', 'thuoc chim', NULL),
+('12', '4', 'thuc an chim', NULL),
+('13', '5', 'phu kien', NULL),
+('2', '1', 'thuoc cho', NULL),
+('3', '1', 'thuc an cho', NULL),
+('4', '2', 'thu meo', NULL),
+('5', '2', 'thuoc meo', NULL),
+('6', '2', 'thuc an meo', NULL),
+('7', '3', 'thu ca', NULL),
+('8', '3', 'thuoc ca', NULL),
+('9', '3', 'thuc an ca', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `thucungcho`
+--
+
+CREATE TABLE `thucungcho` (
+  `Id` int(11) NOT NULL,
+  `MaTL` varchar(11) CHARACTER SET utf8mb4 NOT NULL,
+  `Ten` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `Giong` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `GoiTinh` varchar(10) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `CanNang` varchar(10) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `ChieuCao` varchar(10) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `Tuoi` int(10) DEFAULT NULL,
+  `soluong` int(11) NOT NULL,
+  `MoTa` varchar(225) COLLATE utf8_unicode_ci NOT NULL,
+  `HinhAnh` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `GiaTien` int(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `khachhang`
+-- Dumping data for table `thucungcho`
 --
 
-INSERT INTO `khachhang` (`MaKH`, `Ho`, `Ten`, `GioiTinh`, `SDT`, `Email`, `NgaySinh`, `DiaChi`) VALUES
-('KH01', 'Nguyễn', 'Tiến', 'Nam', 564215225, 'nguyentien01@gmail.com', '2000-12-06', 'Hải Châu - Đà Nẵng'),
-('KH02', 'Trần', 'Quyền', 'Nam', 957654226, 'tranquyen2000@gmail.com', '1998-11-18', 'Hải Lăng - Quảng Trị'),
-('KH03', 'Văn Thị', 'Đào', 'Nữ', 365425585, 'trandao74@gmail.com', '2001-11-01', 'Đông Hà - Quảng Trị'),
-('KH04', 'Phan Văn', 'Quyết', 'Nam', 95486254, 'quetphanvan92@gmail.com', '2003-04-09', 'Điện Bàn - Quảng Nam');
+INSERT INTO `thucungcho` (`Id`, `MaTL`, `Ten`, `Giong`, `GoiTinh`, `CanNang`, `ChieuCao`, `Tuoi`, `soluong`, `MoTa`, `HinhAnh`, `GiaTien`) VALUES
+(1, '1', 'chó husky', 'chó mỹ', 'đực', '10 kg', '80 cm', 1, 50, 'chó trắng vàng', 'https://duypets.com/wp-content/uploads/2019/11/meo-my-long-ngan-1.png', 1500000),
+(2, '2', 'Thuốc nhỏ trị rận ở chó', '1', '1', '1', '1', 1, 50, 'Thuốc nhỏ trị rận cho chó Fronil Spot là thuốc nhỏ ngoài ra phòng và trị các loại ve, rận, bọ chét ở chó tốc độ nhanh, kéo dài.', 'https://duypets.com/wp-content/uploads/2019/11/meo-my-long-ngan-1.png', 55000),
+(3, '3', 'Thức ăn cho các loài chó lớn', '1', '1', '1', '1', 1, 50, 'Trong thức ăn cho chó Smartheart có chứa hàm lượng Protein, hàm lượng chất đạm và chất xơ tương đối cân bằng.\r\nThành phần dinh dưỡng đầy đủ và cân bằng giúp cho cún cưng của gia đình bạn sẽ phát triển một cách toàn diện.', 'https://duypets.com/wp-content/uploads/2019/11/meo-my-long-ngan-1.png', 168000),
+(4, '4', 'Mèo mỹ lông ngắn', 'Mèo mỹ', 'cái', '3kg', '30cm', 1, 50, 'Mèo Mỹ lông ngắn có tên tiếng anh là American Shorthair, là một giống mèo quen thuộc với hầu hết những ai yêu mèo vì chúng vô cùng đáng yêu và được nuôi khá phổ biến ở Việt Nam.', 'https://duypets.com/wp-content/uploads/2019/11/meo-my-long-ngan-1.png', 2000000),
+(5, '5', 'Thuốc trị sán dây, sản lá ở mèo', '1', '1', '1', '1', 1, 50, 'Thuốc tẩy giun sanpet là loại thuốc chuyên dụng tẩy sạch giun cho chó mèo, 1 viên tẩy cho thể trọng 5kg giá 6k/viên, 1 vỉ thuốc gồm 10 viên', 'https://duypets.com/wp-content/uploads/2019/11/meo-my-long-ngan-1.png', 60000),
+(6, '6', 'Thức ăn dành cho mèo', '1', '1', '1', '1', 1, 50, 'Thức ăn khô, ăn nhanh dành cho mèo, đầy đủ chất dinh dưỡng, đang phổ biển nhất hiện nay.', 'http://img.websosanh.vn/v2/users/root_product/images/thuc-an-cho-meo-thuc-an-danh/e7l553wdf2fnb.jpg', 350000),
+(7, '7', 'Cá rồng đột biến da đỏ', 'Cá nước ngọt', '1', '1 kg', '50 mm', 1, 50, 'Cá rồng là loài cá được ưa chuộng cả ở Việt Nam và trên Thế giới. Cá rồng huyết long bình thường đã quý hiếm, nhưng cũng có những loài bị dị tật bẩm sinh nên giá thành tương đối cao, thậm chí có thể lên đến hàng nghìn USD.', 'https://icdn.dantri.com.vn/thumb_w/640/2017/ca-canh-1-huyet-long-1491372321458.jpg', 100000000),
+(8, '8', 'Thuốc tetra Nhật Bản', '1', '1', '1', '1', 1, 50, 'Thuốc Tetra Nhật Bản: Như tên gọi của thuốc thì Tetra có nguồn gốc ở Nhật Bản và dùng điều trị các bệnh của nấm như thối mang, thối da, đỏ vây, sung huyết, sùi miệng hay cá bị nhiễm trùng do cọ xát.', 'https://storage.googleapis.com/cdn.nhanh.vn/store1/30346/artCT/87066/thuoc_tri_nam_tetra_nhat.jpg', 150000),
+(9, '9', 'Bột cám cá', '1', '1', '1', '1', 1, 50, 'Thức ăn cho cá, hay còn gọi là cám cá (dạng viên) có 2 cỡ dành cho cá nhỏ, viên cám kích thước ~1~2mm, Cỡ lớn dành cho cá to viên cám kích thước ~4mm. Thức ăn cho cá chứa đầy đủ thành phần dinh dưỡng cho cá phát triển tốt', 'https://media3.scdn.vn/img3/2019/12_23/ZrDUwu.jpg', 50000),
+(10, '10', 'Chào mào mũi đột biến bạch tạng', 'Chim Việt', 'cái', '2', '40', 1, 50, 'Khác với chim Chào Mào thường nhật, và giá cả có thể nói tới bạc triệu trở lên, tùy vào địa phương, nhu cầu và thể chất của con chim.', 'https://vnn-imgs-f.vgcloud.vn/2020/06/14/08/chim-mau-1.jpg', 12000000),
+(11, '11', 'Thuốc trị đau chân dành cho chim cảnh', '1', '1', '1', '1', 1, 50, 'Tăng hàm lượng canxi, giúp chimm nhanh phục hồi vết thương như đau chân, xệ cánh.', 'https://cf.shopee.vn/file/c0b5014ff8545c9ef7399fac246dc288', 30000),
+(12, '12', 'Thức ăn nhanh dạng bột dành cho chim cảnh', '1', '1', '1', '1', 1, 50, 'Sử dụng thức ăn cho chim được chế biến sẵn sẽ giúp cho người nuôi đỡ vất vã hơn khi tìm kiếm thức ăn tự nhiên nhưng vẫn đảm bảo chất dinh dưỡng', 'https://caresspet.com/wp-content/uploads/2017/01/IMG_4376_zpsd5c46664-1280x720.jpg', 50000),
+(13, '13', 'Vòng cổ phản quang', '1', '1', '1', '1', 1, 50, '- Chất liệu: vải\r\n- Tính năng: bền, mềm mại và thân thiện với da của thú cưng.\r\n- Dành cho chó mèo nhỏ\r\n- Có 6 Màu: đỏ / xanh / hồng / xanh / vàng / đen\r\n- Khóa bằng nhựa thóa lắp dễ dàng\r\n', 'https://cf.shopee.vn/file/827905fc63e7f531bdcd2d197e16c179', 20000),
+(14, '13', 'Máy sục khí oxy 1 vòi 248', '1', '1', '1', '1', 1, 50, 'Công suất: 3w Lưu lượng khí: 3.5lít/phút Số lượng đầu vòi: 1 Chế độ điều chỉnh lưu lượng khí: có Nguồn điện: 220v-240v/50hz Mức độ gây ồn: trung bình Sản phẩm gồm: Máy sủi Cách sử dụng: Để quả sủi, miếng sủi, thanh sủi,...', 'https://vn-test-11.slatic.net/p/544994b17e602a77b1131a660e3cf2a5.png_800x800Q100.jpg', 48000),
+(15, '1', 'Chó cỏ', 'Chó úc', 'Đực', '3kg', '20cm', 4, 4, 'Chó nhà rất hiền', 'https://dean2020.edu.vn/wp-content/uploads/2020/03/anh-cho-con.jpg', 4000000),
+(16, '1', 'Chó phốc', 'Chó Mỹ', 'Đực', '2kg', '30cm', 1, 2, 'Chó Phốc thuần Mỹ', 'https://www.thukieng.com/wp-content/uploads/2017/11/pomeranian-boo-1.jpg', 2000000),
+(17, '1', 'Shi Ba nhật', 'Nhật', 'Đực', '1kg', '15cm', 0, 12, 'Chó Shiba Nhật mới đẻ 2 tuần', 'https://img4.thuthuatphanmem.vn/uploads/2020/03/08/hinh-anh-nhung-con-cho-de-thuong_092948873.jpg', 300000),
+(18, '1', 'Husky ngáo', 'Mỹ', 'Cái', '8kg', '60cm', 2, 1, 'Chó husky siêu ngáo phá nhà như điên', 'https://sieupet.com/sites/default/files/pictures/images/1-1473150685951-5.jpg', 5000000),
+(19, '1', 'Corgi nhật mới 2021', 'Nhật', 'Cái', '7kg', '50cm', 2, 2, 'Chó Corgi 2 tuổi cực xinh', 'https://dogily.vn/wp-content/uploads/2019/09/Hinh-anh-ve-cac-chu-cho-dang-yeu-Corgi.jpg', 7000000),
+(20, '1', 'piltpull', 'Alasca', 'Đực', '20kg', '70cm', 2, 2, 'PitPull siêu ngầu', 'https://i.pinimg.com/originals/8f/69/b7/8f69b7fa03316077e54652db4622c1ff.jpg', 2000000),
+(21, '1', 'Pit pull ông hoàng', 'Mỹ', 'đực', '25kg', '75cm', 2, 3, 'pitpull Mỹ', 'http://i.imgur.com/7Ru3HBT.jpg', 2000000),
+(22, '4', 'Mèo xiêm', 'Châu Âu', 'Cái', '1kg', '10cm', 1, 50, 'Mèo xiêm có bộ lông khá ngắn và mượt, chúng cũng có nhiều màu đẹp. Đặc điểm nổi bật nhất trên cơ thể là phần lông ở mặt, đuôi, tai, bàn chân có màu đậm hơn những vị trí khác', 'https://petmaster.vn/petroom/wp-content/uploads/2020/04/meo-canh-2.jpg', 1000000),
+(23, '4', 'Mèo Anh lông dài', 'Mèo Anh', 'đực', '1 kg', '10 cm', 1, 50, 'Mèo Anh lông dài được đánh giá là loài mèo cảnh đẹp, có ngoại hình vô cùng xinh xắn, dễ thương với bộ lông dài mềm mại.', 'https://petmaster.vn/petroom/wp-content/uploads/2020/04/meo-canh-4.jpg', 2000000),
+(24, '4', 'Mèo Anh lông ngắn', 'Mèo Anh', 'cái', '2 kg ', '12 cm', 1, 50, 'Nhìn bộ lông của chúng tuy ngắn nhưng rất dày, có thể giữ cho cơ thể có nhiệt độ ổn định. Các màu lông phổ biến của chúng là xám, tabby, trắng, silver, golden,…', 'https://petmaster.vn/petroom/wp-content/uploads/2020/04/meo-canh-5.jpg', 7000000),
+(25, '4', 'Mèo Ba Tư', 'Mèo Châu Âu', 'cái', '1 kg', '14 cm', 1, 50, 'Ngoại hình sang chảnh nên được giới quý tộc châu Âu hết mực yêu quý, chiều chuộng.', 'https://petmaster.vn/petroom/wp-content/uploads/2020/04/meo-canh-6.jpg', 8000000),
+(26, '4', 'Mèo Chinchilla', 'Mèo Ba Tư', 'Đực', '2 kg', '14 cm', 1, 50, 'Mèo Chinchilla là sự lai tạo giữa mèo Ba Tư và giống mèo bản địa của Nam Phi. Vì thế chúng sở hữu bộ lông xinh xắn của mèo Ba Tư và có đôi mắt màu xanh ngọc lục bảo hoang dã của mèo Nam Phi trông vô cùng cuốn hút.', 'https://petmaster.vn/petroom/wp-content/uploads/2020/04/meo-canh-7.jpg', 8000000),
+(27, '4', 'Mèo tai cụp Scottish Fold', 'Scotland', 'Đực', '1 kg', '13 cm', 1, 20, 'Mèo Scottish Fold đã khuấy đảo cộng đồng yêu mèo nhờ vào đôi tai cụp và ngoại hình dễ thương của mình.', 'https://petmaster.vn/petroom/wp-content/uploads/2020/04/meo-canh-8.jpg', 12000000),
+(28, '4', 'Mèo chân ngắn Munchkin', 'Mỹ', 'Đực', '1 kg', '14 cm', 1, 20, 'Giống mèo lùn khá thân thiện với con người và sống cực kỳ tình cảm. Chúng thích chơi trò đuổi bắt đèn laze, cần câu mèo. Và nếu không có người chơi cùng, mèo Munchkin dành thời gian để ngủ nhiều hơn.', 'https://petmaster.vn/petroom/wp-content/uploads/2020/04/meo-canh-9.jpg', 15000000),
+(29, '7', 'Cá ba đuôi nước ngọt dễ nuôi', 'Cá nước ngọt', '1', '400 gram', '50 mm', 1, 100, 'Là loài cá cảnh đẹp thuộc họ cá Chép. Loại cá này dễ thích nghi với điều kiện sống trong bể nuôi từ kích cỡ nhỏ đến to, hòn non bộ, bể cạn, bể kính…Điểm đặc biệt của cá 3 đuôi là loại cá cảnh nước ngọt dễ nuôi.', 'http://xenangphuy.com/upload/images/ca-ba-duoi-lam-canh-dep.jpg', 20000),
+(30, '7', 'Cá chép Nhật (cá Koi)', 'Cá nước ngọt', '1', '1 kg', '5 cm', 1, 50, 'Cá Koi là loài cá chép lai tạo, có quan hệ họ hàng gần với cá vàng và được nuôi để làm cảnh. Cá Koi được cho là loại cá kiểng đẹp dễ nuôi mang lại may mắn, thể hiện triển vọng tương lai và cơ hội về tài chính..', 'http://xenangphuy.com/upload/images/ca-koi-ca-canh-dep.jpg', 350000),
+(31, '7', 'Cá hồng két', 'Cá nước ngọt', '1', '500 gram', '4 cm', 1, 30, 'Cá hồng két hay còn gọi là cá Két đỏ, cá huyết anh vũ, còn được biết đến với tên gọi tiếng Anh là blood parrot cichlid, parrot cichlid, bloody parrot là một loài cá cảnh đẹp được hình thành do kết quả lai tạo trong họ Cichlid', 'http://xenangphuy.com/upload/images/ca-hong-ket-ca-canh-dep.jpg', 50000),
+(32, '7', 'Cá đá', 'Cá nước ngọt', '1', '200 gram', '1 cm', 1, 60, 'Cá đá là loài cá cảnh đẹp, vốn là loài Betta thuần dưỡng lâu đời ở Thái Lan rồi sau đó lan ra khắp thế giới.', 'http://xenangphuy.com/upload/images/ca-da-canh-de-nuoi.jpg', 70000),
+(33, '7', 'Cá thanh ngọc', 'Cá nước ngọt', '1', '300 gram', '3 cm', 1, 40, 'Cá thanh ngọc làm cá kiểng đẹp nhờ có chấm dài khoảng 4 – 7 cm. Gai vây hậu môn: 6-8. Có 24-28 tia mềm vây hậu môn phân nhánh, 13 hàng vảy nằm ngang, và từ 2 trở lên các sọc sẫm màu nằm dọc theo thân', 'http://xenangphuy.com/upload/images/ca-thanh-ngoc-dep-de-nuoi.jpg', 10000);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `loaiphukien`
+-- Table structure for table `users`
 --
 
-CREATE TABLE `loaiphukien` (
-  `maLoaiPKien` varchar(11) NOT NULL,
-  `LoaiPhuKien` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `loaiphukien`
---
-
-INSERT INTO `loaiphukien` (`maLoaiPKien`, `LoaiPhuKien`) VALUES
-('LPK01', 'Phụ kiện dành cho Chó'),
-('LPK02', 'Phụ kiện dành cho Mèo'),
-('LPK03', 'Phụ kiện dành cho Chim'),
-('LPK04', 'Phụ kiện dành cho Cá');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `loaithu`
---
-
-CREATE TABLE `loaithu` (
-  `MaLoai` varchar(11) NOT NULL,
-  `TenLoai` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `loaithu`
---
-
-INSERT INTO `loaithu` (`MaLoai`, `TenLoai`) VALUES
-('ML01', 'Chó'),
-('ML02', 'Mèo'),
-('ML03', 'Chim'),
-('ML04', 'Ca');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `loaithucan`
---
-
-CREATE TABLE `loaithucan` (
-  `MaloaiThucAn` varchar(11) NOT NULL,
-  `TenLoaiThucAn` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `loaithucan`
---
-
-INSERT INTO `loaithucan` (`MaloaiThucAn`, `TenLoaiThucAn`) VALUES
-('LTA01', 'Thức ăn dành cho Chó'),
-('LTA02', 'Thức ăn dành cho Mèo'),
-('LTA03', 'Thức ăn dành cho Chim'),
-('LTA04', 'Thức ăn dành cho Cá');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `loaithuoc`
---
-
-CREATE TABLE `loaithuoc` (
-  `MaLoaiThuoc` varchar(11) NOT NULL,
-  `TenLoaiThuoc` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `loaithuoc`
---
-
-INSERT INTO `loaithuoc` (`MaLoaiThuoc`, `TenLoaiThuoc`) VALUES
-('MLT01', 'Thuốc chó'),
-('MLT02', 'thuốc mèo'),
-('MLT03', 'thuốc chim'),
-('MLT04', 'thuốc cá');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `mota`
---
-
-CREATE TABLE `mota` (
-  `MaMoTa` varchar(11) NOT NULL,
-  `MaThu` varchar(11) NOT NULL,
-  `MaThuoc` varchar(11) NOT NULL,
-  `ThongTin` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `mota`
---
-
-INSERT INTO `mota` (`MaMoTa`, `MaThu`, `MaThuoc`, `ThongTin`) VALUES
-('MTA01', 'MTC01', 'MT01', 'trị tất cả các loại bọ chét'),
-('MTA02', 'MTC02', 'MT02', 'Tẩy các loại giun sán'),
-('MTA03', 'MTC03', 'MT03', 'trị tiêu chảy, khàng giọng, sả cánh'),
-('MTA04', 'MTC04', 'MT04', 'Trị tất cả các loại nấm cho cá');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `phukien`
---
-
-CREATE TABLE `phukien` (
-  `MaPkien` varchar(11) NOT NULL,
-  `MaLoaiPKien` varchar(11) NOT NULL,
-  `TenPhuKien` varchar(100) NOT NULL,
-  `giaTien` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `phukien`
---
-
-INSERT INTO `phukien` (`MaPkien`, `MaLoaiPKien`, `TenPhuKien`, `giaTien`) VALUES
-('PK01', 'LPK01', 'Chén ăn cho chó bằng Inox', '80.000vnđ'),
-('PK02', 'LPK02', 'Roi tét đít Mèo', '30.000vnđ'),
-('PK03', 'LPK03', 'Găng tay da huấn luyện chim', '100.000vnđ'),
-('PK04', 'LPK04', 'Máy sục khí tạo không khí trong bể cá', '200.000vnđ');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `thongtinchitiet`
---
-
-CREATE TABLE `thongtinchitiet` (
-  `MaTT` varchar(11) COLLATE utf8_unicode_ci NOT NULL,
-  `MaThu` varchar(11) COLLATE utf8_unicode_ci NOT NULL,
-  `ThongTin` varchar(500) COLLATE utf8_unicode_ci NOT NULL
+CREATE TABLE `users` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `phone` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `dateofbirth` date NOT NULL,
+  `photo` text COLLATE utf8_unicode_ci NOT NULL,
+  `address` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `addressSpecific` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `thongtinchitiet`
+-- Dumping data for table `users`
 --
 
-INSERT INTO `thongtinchitiet` (`MaTT`, `MaThu`, `ThongTin`) VALUES
-('TT01', 'MTC01', 'Hầu hết giống chó Bichon Frise có ngoại hình nhỏ bé với chiều cao từ 23-30cm, nặng 6-11kg đối với con trưởng thành, ngoài ra Bichon Frise cũng có những con to hơn nhưng khá hiếm.\r\nCùng với vóc dáng nhỏ bé dễ thương đó chính là bộ lông trắng muốt xoăn tít toàn thân, đôi mắt và mũi của chúng đều màu đen, hai tai cụp sát bên hai má trông rất dễ thương. Những đặc điểm này khiến chó Bichon giống như một chú chó nhồi bông đồ chơi mà ai cũng muốn sở hữu.'),
-('TT02', 'MTC02', 'Mèo anh lông dài màu socola\r\nĐã ngừa ve sổ giun\r\nBiết nghe lời đi vệ sinh đúng chỗ\r\nĂn cả cơm lẫn cám\r\nĐuôi hơi bị gẫy nhưng là giống lông xù nên không bị lộ'),
-('TT03', 'MTC03', 'Thuộc các loài chim hót hay nhất, chim Vàng Anh còn được gọi là chim Hoàng Anh, có giọng hót thánh thót rất dễ vào lòng người.\r\nChim Vàng Anh luôn nổi bật với màu lông vàng rực. Chim mái và chim trống sẽ có ánh màu khác nhau đôi chút.'),
-('TT04', 'MTC04', 'Với vóc dáng to, hơi hung dữ nên chúng sở hữu một phong thái kiêu sa, hút hồn không giống với bất kỳ loại cá cảnh nào. Vì vậy khi đặt bể cá rồng trong nhà toát lên một vẻ đẹp uy nghi, thu hút tài lộc và xua đuổi tà mai, tai họa.');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `thucan`
---
-
-CREATE TABLE `thucan` (
-  `MaThucAn` varchar(11) NOT NULL,
-  `MaLoaiThucAn` varchar(11) NOT NULL,
-  `TenThucAn` varchar(100) NOT NULL,
-  `giaTien` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `thucan`
---
-
-INSERT INTO `thucan` (`MaThucAn`, `MaLoaiThucAn`, `TenThucAn`, `giaTien`) VALUES
-('TA01', 'LTA01', 'Cốm ăn nhanh đầy đủ chất dinh dưỡng - túi 500g', '160.000vnđ'),
-('TA02', 'LTA02', 'CatFood-Me.o', '150.000vnđ'),
-('TA03', 'LTA03', 'Cốm ăn cho chim cảnh - túi 500g', '120.000vnđ'),
-('TA04', 'LTA04', 'Túi 100g thức ăn dành cho cá ', '80.000vnđ');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `thucung`
---
-
-CREATE TABLE `thucung` (
-  `MaThu` varchar(11) NOT NULL,
-  `MaLoai` varchar(11) NOT NULL,
-  `Ten` varchar(100) NOT NULL,
-  `Gia` double NOT NULL,
-  `SoLuongCon` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `thucung`
---
-
-INSERT INTO `thucung` (`MaThu`, `MaLoai`, `Ten`, `Gia`, `SoLuongCon`) VALUES
-('MTC01', 'ML01', 'Chó Bichon Frise  ', 1500000, 10),
-('MTC02', 'ML02', 'Mèo Anh lông dài', 1500000, 5),
-('MTC03', 'ML03', 'Chim Vàng Anh', 1500000, 7),
-('MTC04', 'ML04', 'Cá Rồng', 1500000, 10);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `thuoc`
---
-
-CREATE TABLE `thuoc` (
-  `MaThuoc` varchar(11) NOT NULL,
-  `MaLoaiThuoc` varchar(11) NOT NULL,
-  `TenThuoc` varchar(100) NOT NULL,
-  `giaTien` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `thuoc`
---
-
-INSERT INTO `thuoc` (`MaThuoc`, `MaLoaiThuoc`, `TenThuoc`, `giaTien`) VALUES
-('MT01', 'MLT01', 'Thuốc trị bọ chét', 1500000),
-('MT02', 'MLT02', 'Thuốc tẩy giun cho mèo', 1500000),
-('MT03', 'MLT03', 'Thuốc trị tiêu chảy', 1500000),
-('MT04', 'MLT04', 'Thuốc trị nấm da', 1500000);
+INSERT INTO `users` (`id`, `name`, `email`, `password`, `phone`, `dateofbirth`, `photo`, `address`, `addressSpecific`, `created_at`, `updated_at`) VALUES
+(6, 'Thang', 'thang@gmail.com', '123456', '0123456789', '2000-03-02', 'Android/profile_image/6.jpeg', 'Mân Thái, Sơn Trà, Đà Nẵng', '14 Nam Thọ 4', NULL, NULL),
+(7, 'minh', 'minh@gmail.com', '123456', '0987767344', '2022-01-10', 'Android/profile_image/6.jpeg', 'khu 3', 'aaaa', NULL, NULL),
+(9, '', NULL, '0987654321', '0987654321', '0000-00-00', '', '', '', NULL, NULL);
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `khachhang`
+-- Indexes for table `chitiethoadon`
 --
-ALTER TABLE `khachhang`
-  ADD PRIMARY KEY (`MaKH`);
+ALTER TABLE `chitiethoadon`
+  ADD KEY `MaHD` (`MaHD`),
+  ADD KEY `MaSP` (`MaSP`);
 
 --
--- Indexes for table `loaiphukien`
+-- Indexes for table `danhmuc`
 --
-ALTER TABLE `loaiphukien`
-  ADD PRIMARY KEY (`maLoaiPKien`);
+ALTER TABLE `danhmuc`
+  ADD PRIMARY KEY (`maDM`);
 
 --
--- Indexes for table `loaithu`
+-- Indexes for table `hoadon`
 --
-ALTER TABLE `loaithu`
-  ADD PRIMARY KEY (`MaLoai`);
+ALTER TABLE `hoadon`
+  ADD PRIMARY KEY (`MaHD`),
+  ADD KEY `MaKH` (`MaKH`);
 
 --
--- Indexes for table `loaithucan`
+-- Indexes for table `phanquyen`
 --
-ALTER TABLE `loaithucan`
-  ADD PRIMARY KEY (`MaloaiThucAn`);
+ALTER TABLE `phanquyen`
+  ADD PRIMARY KEY (`MaQuyen`);
 
 --
--- Indexes for table `loaithuoc`
+-- Indexes for table `theloai`
 --
-ALTER TABLE `loaithuoc`
-  ADD PRIMARY KEY (`MaLoaiThuoc`);
+ALTER TABLE `theloai`
+  ADD PRIMARY KEY (`MaTL`),
+  ADD KEY `MaDM` (`MaDM`);
 
 --
--- Indexes for table `mota`
+-- Indexes for table `thucungcho`
 --
-ALTER TABLE `mota`
-  ADD PRIMARY KEY (`MaMoTa`),
-  ADD KEY `MaThu` (`MaThu`),
-  ADD KEY `MaThuoc` (`MaThuoc`);
+ALTER TABLE `thucungcho`
+  ADD PRIMARY KEY (`Id`),
+  ADD KEY `MaTL` (`MaTL`);
 
 --
--- Indexes for table `phukien`
+-- Indexes for table `users`
 --
-ALTER TABLE `phukien`
-  ADD PRIMARY KEY (`MaPkien`),
-  ADD KEY `MaLoaiPKien` (`MaLoaiPKien`);
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `users_email_unique` (`email`);
 
 --
--- Indexes for table `thongtinchitiet`
+-- AUTO_INCREMENT for dumped tables
 --
-ALTER TABLE `thongtinchitiet`
-  ADD PRIMARY KEY (`MaTT`);
 
 --
--- Indexes for table `thucan`
+-- AUTO_INCREMENT for table `thucungcho`
 --
-ALTER TABLE `thucan`
-  ADD PRIMARY KEY (`MaThucAn`),
-  ADD KEY `MaLoaiThucAn` (`MaLoaiThucAn`);
+ALTER TABLE `thucungcho`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
--- Indexes for table `thucung`
+-- AUTO_INCREMENT for table `users`
 --
-ALTER TABLE `thucung`
-  ADD PRIMARY KEY (`MaThu`),
-  ADD KEY `MaLoai` (`MaLoai`);
-
---
--- Indexes for table `thuoc`
---
-ALTER TABLE `thuoc`
-  ADD PRIMARY KEY (`MaThuoc`),
-  ADD KEY `MaLoaiThuoc` (`MaLoaiThuoc`);
+ALTER TABLE `users`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- Constraints for dumped tables
 --
 
 --
--- Constraints for table `mota`
+-- Constraints for table `theloai`
 --
-ALTER TABLE `mota`
-  ADD CONSTRAINT `mota_ibfk_1` FOREIGN KEY (`MaThu`) REFERENCES `thucung` (`MaThu`),
-  ADD CONSTRAINT `mota_ibfk_2` FOREIGN KEY (`MaThuoc`) REFERENCES `thuoc` (`MaThuoc`);
-
---
--- Constraints for table `phukien`
---
-ALTER TABLE `phukien`
-  ADD CONSTRAINT `phukien_ibfk_1` FOREIGN KEY (`MaLoaiPKien`) REFERENCES `loaiphukien` (`maLoaiPKien`);
-
---
--- Constraints for table `thucan`
---
-ALTER TABLE `thucan`
-  ADD CONSTRAINT `thucan_ibfk_1` FOREIGN KEY (`MaLoaiThucAn`) REFERENCES `loaithucan` (`MaloaiThucAn`);
-
---
--- Constraints for table `thucung`
---
-ALTER TABLE `thucung`
-  ADD CONSTRAINT `thucung_ibfk_1` FOREIGN KEY (`MaLoai`) REFERENCES `loaithu` (`MaLoai`);
-
---
--- Constraints for table `thuoc`
---
-ALTER TABLE `thuoc`
-  ADD CONSTRAINT `thuoc_ibfk_1` FOREIGN KEY (`MaLoaiThuoc`) REFERENCES `loaithuoc` (`MaLoaiThuoc`);
+ALTER TABLE `theloai`
+  ADD CONSTRAINT `theloai_ibfk_1` FOREIGN KEY (`MaDM`) REFERENCES `danhmuc` (`maDM`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
