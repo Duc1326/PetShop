@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F8F8A0"
-    tools:context=".views.CaNhan"
+    tools:context=".views.SuaCaNhan"
     android:orientation="vertical">
 
     <RelativeLayout
@@ -59,11 +59,10 @@
                 android:textStyle="bold"
                 android:gravity="center"
                 />
-            <TextView
-                android:id="@+id/tenkh"
+            <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hasune Masumi"
+                android:hint="ten"
                 android:textColor="@color/black"
                 android:textSize="22sp"
                 android:layout_marginTop="40dp"
@@ -91,14 +90,14 @@
 
                 />
 
-            <TextView
+            <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-android:id="@+id/email"
+
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="10dp"
-                android:text="minhtandz951@gmail.com"
+                android:hint="minhtandz951@gmail.com"
                 android:textColor="#242424"
                 android:textSize="22sp"
                 android:textStyle="bold" />
@@ -124,10 +123,10 @@ android:id="@+id/email"
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0392252429"
+                android:hint="0392252429"
                 android:textColor="@color/black"
                 android:textSize="23sp"
-                android:id="@+id/sdt"
+
                 android:layout_marginLeft="25dp"
                 android:textStyle="bold"
                 android:gravity="center"
@@ -154,10 +153,9 @@ android:id="@+id/email"
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="18/10/2001"
+                android:hint="18/10/2001"
                 android:textColor="@color/black"
                 android:textSize="23sp"
-                android:id="@+id/ngaysinh"
                 android:layout_marginLeft="25dp"
                 android:textStyle="bold"
                 android:gravity="center"
@@ -184,23 +182,23 @@ android:id="@+id/email"
             <TextView
                 android:layout_width="265dp"
                 android:layout_height="wrap_content"
-                android:text="Tam Tành phú ninh quảng nam"
+                android:hint="Tam Tành phú ninh quảng nam"
                 android:textColor="@color/black"
                 android:textSize="23sp"
-android:id="@+id/diachi"
+
                 android:layout_marginLeft="25dp"
                 android:textStyle="bold"
                 android:gravity="center"
                 />
         </LinearLayout>
         <Button
-            android:id="@+id/btn_sua"
+            android:id="@+id/btn_add"
             android:layout_width="130dp"
             android:layout_height="50dp"
             android:layout_marginLeft="200dp"
             android:layout_marginTop="50dp"
             android:background="@drawable/boder_7"
-            android:text="Sữa"
+            android:text="Lưu"
             android:textColor="@color/black"
             android:textAllCaps="false"
             android:textStyle="bold"
