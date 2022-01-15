@@ -1,9 +1,10 @@
-package com.example.fastfoodapp.Helper;
+package com.example.ducluu.petshop.Helper;
 
 import android.content.Context;
 import android.widget.Toast;
 
-import com.example.fastfoodapp.Model.MonAn;
+import com.example.ducluu.petshop.model.MonAn;
+import com.example.ducluu.petshop.model.thucung;
 
 import java.util.ArrayList;
 
@@ -18,20 +19,20 @@ public class ManagementCard {
     }
 
     public void DeleteListCard() {
-         tinyDB.remove("CardList");
+        tinyDB.remove("CardList");
     }
 
 
-    public ArrayList<MonAn> getListCard() {
+    public ArrayList<thucung> getListCard() {
         return tinyDB.getListObject("CardList");
     }
 
-    public void insertFood(MonAn item){
-        ArrayList<MonAn>listFood = getListCard();
+    public void insertFood(thucung item){
+        ArrayList<thucung>listFood = getListCard();
         boolean exitAlready = false;
         int n = 0;
         for(int i=0;i<listFood.size();i++){
-            if(listFood.get(i).getTenMon().equals(item.getTenMon())){
+            if(listFood.get(i).getTenthu().equals(item.getTenthu())){
                 exitAlready = true;
                 n = i;
                 break;
@@ -47,13 +48,13 @@ public class ManagementCard {
         Toast.makeText(context, "Added to your Cart", Toast.LENGTH_SHORT).show();
     }
 
-    public void plusNumberFood(ArrayList<MonAn> listfood, int position, ChangeNumberItemListener changeNumberItemListener) {
+    public void plusNumberFood(ArrayList<thucung> listfood, int position, ChangeNumberItemListener changeNumberItemListener) {
         listfood.get(position).setNumberInCard(listfood.get(position).getNumberInCard() + 1);
         tinyDB.putListObject("CardList", listfood);
         changeNumberItemListener.changed();
     }
 
-    public void MinusNumberFood(ArrayList<MonAn> listfood, int position, ChangeNumberItemListener changeNumberItemListener) {
+    public void MinusNumberFood(ArrayList<thucung> listfood, int position, ChangeNumberItemListener changeNumberItemListener) {
         if (listfood.get(position).getNumberInCard() == 1) {
             listfood.remove(position);
         } else {
@@ -64,10 +65,10 @@ public class ManagementCard {
     }
 
     public Integer getTotalFee() {
-        ArrayList<MonAn> listFood2 = getListCard();
+        ArrayList<thucung> listFood2 = getListCard();
         int fee = 0;
         for (int i = 0; i < listFood2.size(); i++) {
-            fee = fee + (listFood2.get(i).getGia() * listFood2.get(i).getNumberInCard());
+            fee = fee + (listFood2.get(i).getGiatien() * listFood2.get(i).getNumberInCard());
         }
         return fee;
     }
