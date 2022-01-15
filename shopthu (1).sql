@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 15, 2022 at 03:43 AM
+-- Generation Time: Jan 15, 2022 at 02:37 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.6
 
@@ -176,7 +176,22 @@ INSERT INTO `thucungcho` (`Id`, `MaTL`, `Ten`, `Giong`, `GoiTinh`, `CanNang`, `C
 (30, '7', 'Cá chép Nhật (cá Koi)', 'Cá nước ngọt', '1', '1 kg', '5 cm', 1, 50, 'Cá Koi là loài cá chép lai tạo, có quan hệ họ hàng gần với cá vàng và được nuôi để làm cảnh. Cá Koi được cho là loại cá kiểng đẹp dễ nuôi mang lại may mắn, thể hiện triển vọng tương lai và cơ hội về tài chính..', 'http://xenangphuy.com/upload/images/ca-koi-ca-canh-dep.jpg', 350000),
 (31, '7', 'Cá hồng két', 'Cá nước ngọt', '1', '500 gram', '4 cm', 1, 30, 'Cá hồng két hay còn gọi là cá Két đỏ, cá huyết anh vũ, còn được biết đến với tên gọi tiếng Anh là blood parrot cichlid, parrot cichlid, bloody parrot là một loài cá cảnh đẹp được hình thành do kết quả lai tạo trong họ Cichlid', 'http://xenangphuy.com/upload/images/ca-hong-ket-ca-canh-dep.jpg', 50000),
 (32, '7', 'Cá đá', 'Cá nước ngọt', '1', '200 gram', '1 cm', 1, 60, 'Cá đá là loài cá cảnh đẹp, vốn là loài Betta thuần dưỡng lâu đời ở Thái Lan rồi sau đó lan ra khắp thế giới.', 'http://xenangphuy.com/upload/images/ca-da-canh-de-nuoi.jpg', 70000),
-(33, '7', 'Cá thanh ngọc', 'Cá nước ngọt', '1', '300 gram', '3 cm', 1, 40, 'Cá thanh ngọc làm cá kiểng đẹp nhờ có chấm dài khoảng 4 – 7 cm. Gai vây hậu môn: 6-8. Có 24-28 tia mềm vây hậu môn phân nhánh, 13 hàng vảy nằm ngang, và từ 2 trở lên các sọc sẫm màu nằm dọc theo thân', 'http://xenangphuy.com/upload/images/ca-thanh-ngoc-dep-de-nuoi.jpg', 10000);
+(33, '7', 'Cá thanh ngọc', 'Cá nước ngọt', '1', '300 gram', '3 cm', 1, 40, 'Cá thanh ngọc làm cá kiểng đẹp nhờ có chấm dài khoảng 4 – 7 cm. Gai vây hậu môn: 6-8. Có 24-28 tia mềm vây hậu môn phân nhánh, 13 hàng vảy nằm ngang, và từ 2 trở lên các sọc sẫm màu nằm dọc theo thân', 'http://xenangphuy.com/upload/images/ca-thanh-ngoc-dep-de-nuoi.jpg', 10000),
+(34, '7', 'Cá lau kiếng', 'Cá nước ngọ', '1', '100 gram', '2 cm', 1, 20, 'cá nuôi kiểng không cần oxy được nhiều người chơi cá cảnh chọn nuôi, chúng sẽ làm vệ sinh cho bể cá cảnh một cách tự nhiên giúp tránh các bệnh thường gặp ở cá cảnh', 'http://xenangphuy.com/upload/images/ca-canh-lau-kieng-de-nuoi.jpg', 15000),
+(35, '7', 'Cá tai tượng', 'Cá nước ngọt', '1', '400 gram', '4 cm', 1, 35, 'Cá Tài Phát hay Phát Tài (Tai tượng) là cá kiểng đẹp có kích thước lớn, thường được nuôi không cần oxy chung với cá rồng, cá phát tài trống có đầu gù to lớn rất đẹp.', 'http://xenangphuy.com/upload/images/ca-canh-tai-tuong-de-nuoi.jpg', 120000),
+(36, '7', 'Cá thòi lòi', 'Cá nước ngọt', '1', '250 gram', '2 cm', 1, 35, 'Là loại cá cảnh đẹp độc lạ. Nhiều người tưởng rằng chúng là một loài lưỡng cư vì chúng có đôi mắt lồi như mắt ếch và có thể di chuyển dễ dàng trên cạn bằng hai chi trước. ', 'http://xenangphuy.com/upload/images/ca-thoi-loi-dep.jpg', 25000),
+(37, '7', 'Cá bảy màu', 'Cá nước ngọt', '1', '100 gram', '1 cm', 1, 25, 'Cá bảy màu là cái tên được người Việt mình gọi dân dã, là loài cá cảnh đẹp, dễ nuôi, không cần oxy. Một phần xuất phát từ màu sắc sặc sỡ bên ngoài.', 'http://xenangphuy.com/upload/images/ca-bay-mau-len-mau-lam-canh-dep.jpg', 8000),
+(38, '7', 'Cá thiên đường', 'Cá nước ngọt', '1', '200 gram', '3 cm', 1, 30, 'Cá thiên đường (đuôi cờ, lia thia ruộng) còn gọi là cá lia thia đồng, cá đuôi cờ có nhiều màu sắc đa dạng cùng với vây kỳ căng tròn, tạo nên vẻ đẹp cổ điển trong mọi thời đại.', 'http://xenangphuy.com/upload/images/ca-thien-duong-ca-lam-canh-de-nuoi.jpg', 5000),
+(39, '10', 'Chim Sáo', 'Chim Việt', 'Đực', '300 gram', '10 cm', 1, 20, 'Chim Sáo là một trong những loài chim cảnh dễ nuôi nhất của Việt Nam vì đây là một loài chim mang đặc tính thông minh và có thể bắt chước tiếng người.', 'https://cdn.tgdd.vn/Files/2021/04/12/1342859/cac-giong-chim-canh-pho-bien-thuong-duoc-nuoi-tai-viet-nam-202104121950418589.jpg', 400000),
+(40, '10', 'Chích Chòe', 'Chim Việt', 'Đực', '200 gram', '7 cm', 1, 25, 'Có một dáng vẻ nhỏ nhắn siêu dễ thương, và cách nuôi chim này cũng khá là dễ dàng', 'https://cdn.tgdd.vn/Files/2021/04/12/1342859/cac-giong-chim-canh-pho-bien-thuong-duoc-nuoi-tai-viet-nam-202104121950542502.jpg', 450000),
+(41, '10', 'Chim họa mi', 'Chim Việt', 'Đực', '250 ', '5 cm', 1, 15, 'Loài chim cảnh Việt Nam này khá nhỏ bé, chỉ ngang hoặc bé hơn chim Sơn Ca nhưng bù lại chúng có giọng hót rất hay, trong trẻo.', 'https://cdn.tgdd.vn/Files/2021/04/12/1342859/cac-giong-chim-canh-pho-bien-thuong-duoc-nuoi-tai-viet-nam-202104121951056506.jpg', 150000),
+(42, '10', 'Chim Vẹt', 'Chim Việt', 'Cái', '200 ', '5 cm', 1, 10, 'màu sắc bắt mắt, đáng yêu và đặc biệt là khả năng bắt chước tiếng người.', 'https://cdn.tgdd.vn/Files/2021/04/12/1342859/cac-giong-chim-canh-pho-bien-thuong-duoc-nuoi-tai-viet-nam-202104121951172147.jpg', 500000),
+(43, '10', 'Chim Khuyên', 'Chim Việt', 'Cái', '250 gram', '6 cm', 1, 20, 'Thân hình của chim Khuyên nhỏ nhắn, đầu chim khá to so với phần thân, trán rộng và cao, mắt hơi xếch nhẹ, mắt có vòng khuyên trắng, có bộ lông màu vàng lục.', 'https://cdn.tgdd.vn/Files/2021/04/12/1342859/cac-giong-chim-canh-pho-bien-thuong-duoc-nuoi-tai-viet-nam-202104121951310007.jpg', 300000),
+(44, '10', 'Chim Yến Phụng', 'Chim Việt', 'Đực', '250 gram', '7 cm', 1, 15, 'Chim yến phụng có dáng khoằm, sắc nhọn, mắt tròn, to có một bộ lông hội tụ rất nhiều màu sắc.', 'https://cdn.tgdd.vn/Files/2021/04/12/1342859/cac-giong-chim-canh-pho-bien-thuong-duoc-nuoi-tai-viet-nam-202104121951424406.jpg', 250000),
+(45, '10', 'Chim Vàng Anh', 'Chim Việt', 'Cái', '200 gram', '8 cm', 1, 10, 'Chim Vàng Anh có giọng hót khá giống với tiếng chim giẻ cùi nhưng vô cùng thánh thót.', 'https://cdn.tgdd.vn/Files/2021/04/12/1342859/cac-giong-chim-canh-pho-bien-thuong-duoc-nuoi-tai-viet-nam-202104121952116096.jpg', 350000),
+(46, '10', 'Chim Cu Gáy', 'Chim Việt', 'Cái', '280 gram', '9  cm', 1, 15, 'Chim Cu Gáy có tiếng hót được ví với tiếng sáo trúc, nghe rất thánh thót.', 'https://cdn.tgdd.vn/Files/2021/04/12/1342859/cac-giong-chim-canh-pho-bien-thuong-duoc-nuoi-tai-viet-nam-202104121953177551.jpg', 700000),
+(47, '10', 'Chim Khướu', 'Chim Việt', 'Cái', '350 gram', '10 cm', 1, 10, 'Bộ lông mềm và xốp như bông, phần mào nhô lên khá rõ, trong khi đó phần mắt và mào lại có màu đen nối liền với nhau nhìn khá huyền bí.', 'https://cdn.tgdd.vn/Files/2021/04/12/1342859/cac-giong-chim-canh-pho-bien-thuong-duoc-nuoi-tai-viet-nam-202104121953340301.jpg', 650000),
+(48, '10', 'Chim Chìa Vôi', 'Chim ngoại', 'Cái', '320 gram', '11 cm', 1, 20, 'Loài chim cảnh này không quá rực rỡ nhưng lại sở hữu vẻ đẹp giản dị, dễ chịu. Lông chim có màu xám bút chì, phần đầu và đuôi có màu đen đậm nhưng ở giữa bụng, ngực lại có màu trắng.', 'https://cdn.tgdd.vn/Files/2021/04/12/1342859/cac-giong-chim-canh-pho-bien-thuong-duoc-nuoi-tai-viet-nam-202104121953521704.jpg', 800000);
 
 -- --------------------------------------------------------
 
@@ -266,7 +281,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `thucungcho`
 --
 ALTER TABLE `thucungcho`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT for table `users`
