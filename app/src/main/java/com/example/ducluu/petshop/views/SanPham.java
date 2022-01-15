@@ -179,19 +179,19 @@ public class SanPham extends AppCompatActivity {
 
                         getMonAnAdapter.setTenMon(jsonObject.getString("Ten"));
                         getMonAnAdapter.setGia(jsonObject.getInt("GiaTien"));
-<<<<<<< HEAD
+
                         getMonAnAdapter.setMoTa(jsonObject.getString("MoTa"));
                         getMonAnAdapter.setSao(jsonObject.getDouble("soluong"));
                         getMonAnAdapter.setTuoi(jsonObject.getInt("Tuoi"));
                         getMonAnAdapter.setMaSP(jsonObject.getInt("Id"));
                         getMonAnAdapter.setGiong(jsonObject.getString("Giong"));
                         getMonAnAdapter.setCanNang(jsonObject.getString("CanNang"));
-=======
+
                         getMonAnAdapter.setSao(jsonObject.getDouble("soluong"));
                         getMonAnAdapter.setMoTa(jsonObject.getString("MoTa"));
-                        getMonAnAdapter.setCalories(jsonObject.getInt("Tuoi"));
+                        //getMonAnAdapter.setCalories(jsonObject.getInt("Tuoi"));
                         getMonAnAdapter.setMaSP(jsonObject.getInt("Id"));
->>>>>>> 71ca6fe9377bef57d8e8ca24adc11c6a3a06067c
+
                         getMonAnAdapter.setHinhMon(jsonObject.getString("HinhAnh"));
                     } catch (JSONException e) {
                         e.printStackTrace();
