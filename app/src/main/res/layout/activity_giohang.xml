@@ -11,7 +11,11 @@
         android:id="@+id/cardView3"
         android:layout_width="match_parent"
         android:layout_height="60dp"
+<<<<<<< HEAD
         app:cardBackgroundColor="#FE9D9D"
+=======
+        app:cardBackgroundColor="#62BA60"
+>>>>>>> 71ca6fe9377bef57d8e8ca24adc11c6a3a06067c
         app:layout_constraintBottom_toBottomOf="@+id/cardView4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -50,7 +54,11 @@
         android:id="@+id/cardView4"
         android:layout_width="match_parent"
         android:layout_height="60dp"
+<<<<<<< HEAD
         app:cardBackgroundColor="#FE9D9D"
+=======
+        app:cardBackgroundColor="#60BA62"
+>>>>>>> 71ca6fe9377bef57d8e8ca24adc11c6a3a06067c
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -64,8 +72,13 @@
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:gravity="center"
+<<<<<<< HEAD
             android:text="Thanh Toán"
             android:textSize="20sp"
+=======
+            android:text="MUA"
+            android:textSize="18sp"
+>>>>>>> 71ca6fe9377bef57d8e8ca24adc11c6a3a06067c
             android:textColor="@color/white" />
 
 

@@ -69,6 +69,7 @@
         <entry key="..\:/androidcuoiky/thucung3/PetShop/app/src/main/res/layout/activity_thuc_an.xml" value="0.1796875" />
         <entry key="..\:/androidcuoiky/thucung3/PetShop/app/src/main/res/layout/activity_thuoc_thu_y.xml" value="0.16666666666666666" />
         <entry key="..\:/androidcuoiky/thucung3/PetShop/app/src/main/res/layout/activity_trangchu.xml" value="0.22" />
+<<<<<<< HEAD
         <entry key="..\:/document/121_hocki_5/LapTrinhDiDong_T7/File/Andori_01/PetShop/app/src/main/res/drawable-v2/add_cart.xml" value="0.2046875" />
         <entry key="..\:/document/121_hocki_5/LapTrinhDiDong_T7/File/Andori_01/PetShop/app/src/main/res/drawable-v2/btnnext.xml" value="0.2046875" />
         <entry key="..\:/document/121_hocki_5/LapTrinhDiDong_T7/File/Andori_01/PetShop/app/src/main/res/drawable-v2/card_background.xml" value="0.15572916666666667" />
@@ -86,6 +87,10 @@
         <entry key="..\:/document/121_hocki_5/LapTrinhDiDong_T7/File/Andori_01/PetShop/app/src/main/res/layout/activity_trangchu.xml" value="0.1" />
         <entry key="..\:/document/121_hocki_5/LapTrinhDiDong_T7/File/Andori_01/PetShop/app/src/main/res/layout/dong_giohang.xml" value="0.1526268115942029" />
         <entry key="..\:/document/121_hocki_5/LapTrinhDiDong_T7/File/Andori_01/PetShop/app/src/main/res/layout/dong_sanpham.xml" value="0.11594202898550725" />
+=======
+        <entry key="..\:/document/121_hocki_5/LapTrinhDiDong_T7/File/Andori_01/PetShop/app/src/main/res/layout/activity_giohang.xml" value="0.1526268115942029" />
+        <entry key="..\:/document/121_hocki_5/LapTrinhDiDong_T7/File/Andori_01/PetShop/app/src/main/res/layout/dong_giohang.xml" value="0.1526268115942029" />
+>>>>>>> 71ca6fe9377bef57d8e8ca24adc11c6a3a06067c
         <entry key="..\:/document/121_hocki_5/LapTrinhDiDong_T7/File/Andori_01/PetShop/app/src/main/res/layout/layout_giohang.xml" value="0.1526268115942029" />
         <entry key="..\:/document/121_hocki_5/LapTrinhDiDong_T7/File/PetShop/app/src/main/res/drawable/boder_1.xml" value="0.19739583333333333" />
         <entry key="..\:/document/121_hocki_5/LapTrinhDiDong_T7/File/PetShop/app/src/main/res/drawable/boder_3.xml" value="0.19739583333333333" />
