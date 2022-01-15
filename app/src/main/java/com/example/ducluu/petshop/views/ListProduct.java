@@ -36,7 +36,7 @@ public class ListProduct extends AppCompatActivity {
     CardView cardView;
 
     String urlBase= Utils.BASE_URL;
-    String url = Utils.BASE_URL+"Android/list_product/product.php";
+    String url = Utils.BASE_URL+"/shopthucung/thu/listsanpham.php";
 
     MonAnListAdapter monAnListAdapter;
     RecyclerView recyclerView;
