@@ -167,7 +167,7 @@ public class MyOrder extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> param = new HashMap<>();
-                param.put("id", getId);
+                param.put("id", "6");
                 return param;
             }
         };
