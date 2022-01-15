@@ -16,8 +16,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 
 import com.example.ducluu.petshop.Helper.ManagementCard;
+import com.example.ducluu.petshop.Helper.ManagementCardthu;
 import com.example.ducluu.petshop.model.MonAn;
 import com.example.ducluu.petshop.R;
+import com.example.ducluu.petshop.views.ShowDetail;
+import com.example.ducluu.petshop.views.ThongTinsp;
 
 import java.text.NumberFormat;
 import java.util.ArrayList;
@@ -61,6 +64,14 @@ public class MonAnListAdapter extends RecyclerView.Adapter<MonAnListAdapter.View
         holder.tvPrice.setText(gia_format + "đ");
 
 
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, ThongTinsp.class);
+                intent.putExtra("detail", monAnList.get(position));
+                context.startActivity(intent);
+            }
+        });
 
         holder.btn_add.setOnClickListener(new View.OnClickListener() {
             @Override

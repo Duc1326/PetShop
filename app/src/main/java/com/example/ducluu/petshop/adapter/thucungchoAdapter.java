@@ -13,7 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.ducluu.petshop.Helper.ManagementCard;
+import com.example.ducluu.petshop.Helper.ManagementCardthu;
 import com.example.ducluu.petshop.R;
 import com.example.ducluu.petshop.model.thucung;
 
@@ -27,7 +27,7 @@ public class thucungchoAdapter extends RecyclerView.Adapter<thucungchoAdapter.Vi
     ArrayList<thucung> thucungArrayList;
     String gia_format;
 
-    ManagementCard managementCard;
+    ManagementCardthu managementCardthu;
     private int numberOrder = 1;
 
     public thucungchoAdapter(Context context, ArrayList<thucung> thucungArrayList) {
@@ -64,12 +64,11 @@ public class thucungchoAdapter extends RecyclerView.Adapter<thucungchoAdapter.Vi
 //            @Override
 //            public void onClick(View view) {
 //
-//                MonAn object;
-//                object = monAnList.get(position);
-//                managementCard = new ManagementCard(context);
+//                thucung object;
+//                object = thucungArrayList.get(position);
+//                managementCardthu = new ManagementCardthu(context);
 //                object.setNumberInCard(numberOrder);
-//                managementCard.insertFood(object);
-//
+//                managementCardthu.insertFood(object);
 //            }
 //        });
     }

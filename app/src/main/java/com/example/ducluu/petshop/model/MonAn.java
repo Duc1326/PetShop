@@ -7,12 +7,38 @@ public class MonAn implements Serializable {
     private int maSP;
     private String tenMon;
     private String hinhMon;
-    private int calories;
+    private int Tuoi;
     private Double sao;
     private int gia;
     private String moTa;
     private String nguyenlieu;
     private int numberInCard;
+    private String CanNang;
+    private String Giong;
+
+    public int getTuoi() {
+        return Tuoi;
+    }
+
+    public void setTuoi(int tuoi) {
+        Tuoi = tuoi;
+    }
+
+    public String getCanNang() {
+        return CanNang;
+    }
+
+    public void setCanNang(String canNang) {
+        CanNang = canNang;
+    }
+
+    public String getGiong() {
+        return Giong;
+    }
+
+    public void setGiong(String giong) {
+        Giong = giong;
+    }
 
     public int getMaSP() {
         return maSP;
@@ -36,14 +62,6 @@ public class MonAn implements Serializable {
 
     public void setHinhMon(String hinhMon) {
         this.hinhMon = hinhMon;
-    }
-
-    public int getCalories() {
-        return calories;
-    }
-
-    public void setCalories(int calories) {
-        this.calories = calories;
     }
 
     public Double getSao() {

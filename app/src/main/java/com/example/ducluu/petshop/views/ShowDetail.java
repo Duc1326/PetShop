@@ -14,18 +14,16 @@ import androidx.cardview.widget.CardView;
 
 import com.bumptech.glide.Glide;
 import com.example.ducluu.petshop.Helper.ManagementCard;
-import com.example.ducluu.petshop.databinding.ActivityThongTinspBinding;
 import com.example.ducluu.petshop.model.MonAn;
 import com.example.ducluu.petshop.R;
-
+import com.example.ducluu.petshop.databinding.ActivityShowDetailBinding;
 
 import java.text.NumberFormat;
 import java.util.Locale;
 
+public class ShowDetail extends AppCompatActivity {
 
-public class ThongTinsp extends AppCompatActivity {
-
-    ActivityThongTinspBinding binding;
+    ActivityShowDetailBinding binding;
     String gia_format;
     MonAn object;
     ManagementCard managementCard;
@@ -38,13 +36,13 @@ public class ThongTinsp extends AppCompatActivity {
     RatingBar ratingBar;
 
     ImageView foodPic;
-    TextView foodTxt, caloriesTxt, txtmota,txttuoi,txtgiong;
+    TextView foodTxt, caloriesTxt, tvthanhphan;
     TextView txtSao, txtGia;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityThongTinspBinding.inflate(getLayoutInflater());
+        binding = ActivityShowDetailBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         toolbar = findViewById(R.id.toolbarDetail);
@@ -66,11 +64,10 @@ public class ThongTinsp extends AppCompatActivity {
 
         object.getMaSP();
         foodTxt.setText(object.getTenMon());
-        txtmota.setText(object.getMoTa());
-
-        txttuoi.setText(String.valueOf(object.getTuoi()));
-        txtgiong.setText(object.getGiong());
-
+        caloriesTxt.setText(String.valueOf(object.getTuoi()) + " Calories");
+        tvthanhphan.setText(String.valueOf(object.getMoTa()));
+        txtSao.setText(String.valueOf(object.getSao()));
+        ratingBar.setRating(object.getSao().floatValue());
 
         gia_format = NumberFormat.getNumberInstance(Locale.US).format(object.getGia());
         txtGia.setText(gia_format + "đ");
@@ -93,7 +90,7 @@ public class ThongTinsp extends AppCompatActivity {
         addCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(ThongTinsp.this, GioHang.class));
+                startActivity(new Intent(ShowDetail.this, GioHang.class));
             }
         });
     }
@@ -101,13 +98,12 @@ public class ThongTinsp extends AppCompatActivity {
     private void AnhXa() {
         foodPic = (ImageView) findViewById(R.id.foodPic);
         foodTxt = (TextView) findViewById(R.id.foodTxt);
-        txtgiong = (TextView) findViewById(R.id.txtgiong);
-        txtmota = (TextView) findViewById(R.id.txtmota);
-
-        txttuoi = (TextView) findViewById(R.id.txtTuoi);
+        caloriesTxt = (TextView) findViewById(R.id.calotxt);
+        tvthanhphan = (TextView) findViewById(R.id.thanhphan);
+        txtSao = (TextView) findViewById(R.id.txtSao);
         txtGia = (TextView) findViewById(R.id.txtGia);
         frameLayout = (FrameLayout) findViewById(R.id.frameAdd);
-
+        ratingBar = (RatingBar) findViewById(R.id.ratingBar);
     }
 
     @Override

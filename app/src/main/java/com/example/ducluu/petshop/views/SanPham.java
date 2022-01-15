@@ -13,8 +13,10 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.ducluu.petshop.R;
+import com.example.ducluu.petshop.adapter.MonAnListAdapter;
 import com.example.ducluu.petshop.adapter.thucungchoAdapter;
 import com.example.ducluu.petshop.databinding.ActivitySanPhamBinding;
+import com.example.ducluu.petshop.model.MonAn;
 import com.example.ducluu.petshop.model.thucung;
 import com.example.ducluu.petshop.utils.Utils;
 
@@ -30,12 +32,12 @@ public class SanPham extends AppCompatActivity {
     String urlBase= Utils.BASE_URL;
     String url = Utils.BASE_URL+"Laptrinhdidong_T7/shopthucung/sanpham/thucho.php";
 
-    thucungchoAdapter thucungchoAdapter;
+    MonAnListAdapter monAnListAdapter;
     RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
     JsonArrayRequest request;
     RequestQueue requestQueue;
-    ArrayList<thucung> thucungs;
+    ArrayList<MonAn> monAnList;
 
 
     @Override
@@ -44,7 +46,7 @@ public class SanPham extends AppCompatActivity {
         binding = ActivitySanPhamBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        thucungs = new ArrayList<>();
+        monAnList = new ArrayList<>();
         recyclerView = findViewById(R.id.lvmonan);
         recyclerView.setHasFixedSize(true);
         layoutManager =new LinearLayoutManager(SanPham.this,RecyclerView.VERTICAL,false);
@@ -170,26 +172,27 @@ public class SanPham extends AppCompatActivity {
             public void onResponse(JSONArray response) {
 
                 for (int i=0;i<response.length();i++){
-                    thucung getMonAnAdapter = new thucung();
+                    MonAn getMonAnAdapter = new MonAn();
                     JSONObject jsonObject = null;
                     try {
                         jsonObject = response.getJSONObject(i);
 
-                        getMonAnAdapter.setTenthu(jsonObject.getString("Ten"));
-                        getMonAnAdapter.setGiatien(jsonObject.getInt("GiaTien"));
-                        getMonAnAdapter.setSoluong(jsonObject.getInt("soluong"));
-                        getMonAnAdapter.setMota(jsonObject.getString("MoTa"));
+                        getMonAnAdapter.setTenMon(jsonObject.getString("Ten"));
+                        getMonAnAdapter.setGia(jsonObject.getInt("GiaTien"));
+                        getMonAnAdapter.setMoTa(jsonObject.getString("MoTa"));
+                        getMonAnAdapter.setSao(jsonObject.getDouble("soluong"));
                         getMonAnAdapter.setTuoi(jsonObject.getInt("Tuoi"));
-                        getMonAnAdapter.setId(jsonObject.getInt("Id"));
-
+                        getMonAnAdapter.setMaSP(jsonObject.getInt("Id"));
+                        getMonAnAdapter.setGiong(jsonObject.getString("Giong"));
+                        getMonAnAdapter.setCanNang(jsonObject.getString("CanNang"));
                         getMonAnAdapter.setHinhMon(jsonObject.getString("HinhAnh"));
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
-                    thucungs.add(getMonAnAdapter);
+                    monAnList.add(getMonAnAdapter);
                 }
-                thucungchoAdapter = new thucungchoAdapter(SanPham.this,thucungs);
-                recyclerView.setAdapter(thucungchoAdapter);
+                monAnListAdapter = new MonAnListAdapter(SanPham.this,monAnList);
+                recyclerView.setAdapter(monAnListAdapter);
             }
         }, new Response.ErrorListener() {
             @Override
@@ -202,6 +205,7 @@ public class SanPham extends AppCompatActivity {
         requestQueue = Volley.newRequestQueue(SanPham.this);
         requestQueue.add(request);
     }
+
 
 
     }

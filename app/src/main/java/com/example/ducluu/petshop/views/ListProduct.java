@@ -35,8 +35,8 @@ public class ListProduct extends AppCompatActivity {
     TextView btnBackList;
     CardView cardView;
 
-    String urlBase= Utils.BASE_URL.concat("Laptrinhdidong_T7/");
-    String url = Utils.BASE_URL+"Laptrinhdidong_T7/Android/list_product/product.php";
+    String urlBase= Utils.BASE_URL;
+    String url = Utils.BASE_URL+"Android/list_product/product.php";
 
     MonAnListAdapter monAnListAdapter;
     RecyclerView recyclerView;
@@ -78,7 +78,7 @@ public class ListProduct extends AppCompatActivity {
                         getMonAnAdapter.setGia(jsonObject.getInt("GiaTien"));
                         getMonAnAdapter.setSao(jsonObject.getDouble("soluong"));
                         getMonAnAdapter.setMoTa(jsonObject.getString("MoTa"));
-                        getMonAnAdapter.setCalories(jsonObject.getInt("Tuoi"));
+                        getMonAnAdapter.setTuoi(jsonObject.getInt("Tuoi"));
                         getMonAnAdapter.setMaSP(jsonObject.getInt("Id"));
                         getMonAnAdapter.setHinhMon(jsonObject.getString("HinhAnh"));
                     } catch (JSONException e) {
