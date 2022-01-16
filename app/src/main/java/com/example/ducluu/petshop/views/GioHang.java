@@ -67,7 +67,9 @@ public class GioHang extends AppCompatActivity {
         } else {
             emptyTxt.setVisibility(View.GONE);
         }
+
     }
+
     private void cainaylaNut() {
         btnBack = (TextView) findViewById(R.id.btnBack);
         btnBack.setOnClickListener(new View.OnClickListener() {
