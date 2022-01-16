@@ -22,10 +22,10 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
-        <TextView
+        <ImageButton
             android:id="@+id/btnBack"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="20dp"
+            android:layout_height="15dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="15dp"
             android:background="@drawable/ic_back" />
@@ -146,6 +146,16 @@
         android:layout_weight="7.5"
         tools:listitem="@layout/layout_monan" />
 
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_weight="0.8"
+        app:itemIconSize="30dp"
+        app:itemIconTint="@color/color_bar"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_alignParentBottom="true"
+        android:background="#fff"
+        app:menu="@menu/bottom_nav_menu" />
 
 
 

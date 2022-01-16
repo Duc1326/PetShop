@@ -124,7 +124,7 @@ public class NguoiDung extends AppCompatActivity {
         btnlichsumuahang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(NguoiDung.this, Lichsumuahang.class);
+                Intent intent = new Intent(NguoiDung.this, History.class);
                 startActivity(intent);
             }
         });

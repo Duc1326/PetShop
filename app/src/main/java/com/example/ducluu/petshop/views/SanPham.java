@@ -48,6 +48,7 @@ public class SanPham extends AppCompatActivity {
     RequestQueue requestQueue;
     ArrayList<MonAn> monAnList;
     ImageButton bt1,bt2,bt3,bt4;
+    ImageButton btnBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +64,17 @@ public class SanPham extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
         call_json();
         getViews();
+
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent Trangchu = new Intent(SanPham.this, TrangChu.class);
+                startActivity(Trangchu);
+            }
+        });
+
+
+
 
 
 
@@ -133,6 +145,39 @@ public class SanPham extends AppCompatActivity {
             }
         });
 
+        BottomNavigationView bt  = findViewById(R.id.bottom_navigation);
+
+        bt.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                switch (item.getItemId()){
+                    case R.id.navigation_home:
+                        Intent trangchu = new Intent(SanPham.this, TrangChu.class);
+                        startActivity(trangchu);
+                        break;
+                    case R.id.navigation_cart:
+                        Intent giohang = new Intent(SanPham.this,GioHang.class);
+                        startActivity(giohang);
+                        break;
+                    case R.id.navigation_chat:
+                        Intent trochuyen = new Intent(SanPham.this,TroChuyen.class);
+                        startActivity(trochuyen);
+                        break;
+                    case R.id.navigation_notifications:
+                        Intent thongbao = new Intent(SanPham.this,ThongBao.class);
+                        startActivity(thongbao);
+                        break;
+                    case R.id.navigation_person:
+                        Intent canhan = new Intent(SanPham.this,NguoiDung.class);
+                        startActivity(canhan);
+                        break;
+
+                }
+                return true;
+            }
+        });
+
 
     }
 
@@ -141,87 +186,12 @@ public class SanPham extends AppCompatActivity {
         bt2= findViewById(R.id.imagebtn_seachercat_trangchu);
         bt3 = findViewById(R.id.imagebtn_seacher_bird_trangchu);
         bt4 = findViewById(R.id.imgagebtn_seacher_fish_trangchu);
+
+        btnBack = findViewById(R.id.btnBack);
     }
 
 
-//    public void onClick(View v) {
-//
-//        Drawable dr = getResources().getDrawable(R.drawable.button_pressed);
-//        dr.setColorFilter(Color.parseColor("#FE9D9D"), PorterDuff.Mode.SRC_ATOP);
-//
-//        switch (v.getId()) {
-//            case R.id.btn:
-//
-//                if (button == null) {
-//                    button = (Button) findViewById(v.getId());
-//
-//                } else {
-//                    button.setBackgroundResource(R.drawable.button_pressed);
-//                    button = (Button) findViewById(v.getId());
-//
-//
-//
-//                }
-//                button.setBackgroundDrawable(dr);
-//
-//                break;
-//
-//            case R.id.btn1:
-//                if (button == null) {
-//                    button = (Button) findViewById(v.getId());
-//
-//
-//                } else {
-//                    button.setBackgroundResource(R.drawable.button_pressed);
-//                    button = (Button) findViewById(v.getId());
-//
-//
-//                }
-//                button.setBackgroundDrawable(dr);
-//
-//                break;
-//            case R.id.btn2:
-//                if (button == null) {
-//                    button = (Button) findViewById(v.getId());
-//                } else {
-//                    button.setBackgroundResource(R.drawable.button_pressed);
-//                    button = (Button) findViewById(v.getId());
-//
-//
-//
-//                }
-//                button.setBackgroundDrawable(dr);
-//
-//                break;
-//            case R.id.btn3:
-//                if (button == null) {
-//                    button = (Button) findViewById(v.getId());
-//                } else {
-//                    button.setBackgroundResource(R.drawable.button_pressed);
-//                    button = (Button) findViewById(v.getId());
-//
-//
-//                }
-//                button.setBackgroundDrawable(dr);
-//
-//                break;
-//            case R.id.txtxem:
-//                Intent chitiet = new Intent(SanPham.this, ThongTinsp.class);
-//                startActivity(chitiet);
-//                break;
-//            case R.id.btgio:
-//                Intent giohang = new Intent(SanPham.this, GioHang.class);
-//                startActivity(giohang);
-//                break;
-//            case R.id.btmuan:
-//                Intent thanhtoan = new Intent(SanPham.this, ThanhToan.class);
-//                startActivity(thanhtoan);
-//                break;
-//
-//            default:
-//                break;
-//        }
-//    }
+
 
 
     private void call_json() {
