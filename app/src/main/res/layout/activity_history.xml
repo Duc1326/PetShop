@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Activity.History">
+    tools:context=".views.History">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView2"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        app:cardBackgroundColor="#62BA60"
+        app:cardBackgroundColor="#FFAAA7"
         app:layout_constraintBottom_toBottomOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.47"
@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
-        <TextView
+        <ImageButton
             android:id="@+id/btnBackList"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -52,7 +52,7 @@
             android:id="@+id/cardView"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:background="@drawable/border_footer"
+            android:background="@drawable/boder_layout"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
@@ -66,104 +66,18 @@
             android:layout_height="70dp"
             android:layout_gravity="center"
             android:gravity="center"
-            android:background="@drawable/border_footer"
+            android:background="@drawable/boder_layout"
             app:layout_constraintBottom_toBottomOf="parent">
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottom_navigation"
+                android:layout_weight="0.8"
+                app:itemIconSize="30dp"
+                app:itemIconTint="@color/color_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                app:menu="@menu/bottom_nav_menu" />
 
-
-            <RelativeLayout
-                android:id="@+id/btnHome"
-                android:layout_width="70dp"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="15dp"
-                    android:background="@drawable/home2" />
-
-                <TextView
-                    android:id="@+id/txtHome"
-                    android:layout_centerHorizontal="true"
-                    android:gravity="center"
-                    android:layout_width="70dp"
-                    android:layout_height="30dp"
-                    android:layout_marginTop="40dp"
-                    android:text="Trang Chủ" />
-            </RelativeLayout>
-
-
-
-            <RelativeLayout
-                android:id="@+id/btnProduct"
-                android:layout_marginLeft="20dp"
-                android:layout_width="70dp"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="15dp"
-                    android:background="@drawable/listproduct3" />
-                <TextView
-                    android:id="@+id/txtProduct"
-                    android:layout_width="70dp"
-                    android:layout_height="30dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="40dp"
-                    android:gravity="center"
-                    android:text="Sản Phẩm" />
-            </RelativeLayout>
-            <RelativeLayout
-                android:id="@+id/btnHistory"
-                android:layout_marginLeft="20dp"
-                android:layout_width="70dp"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="15dp"
-                    android:background="@drawable/history_active" /> />
-
-                <TextView
-                    android:id="@+id/txtHistory"
-                    android:layout_centerHorizontal="true"
-                    android:gravity="center"
-                    android:layout_width="70dp"
-                    android:fontFamily="@font/lato_bold"
-                    android:textColor="@color/main"
-                    android:layout_height="30dp"
-                    android:layout_marginTop="40dp"
-                    android:text="Lịch Sử" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/btnProfile1"
-                android:layout_marginLeft="20dp"
-                android:layout_width="70dp"
-                android:layout_height="match_parent">
-
-                <TextView
-
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="15dp"
-                    android:background="@drawable/icon_profile"/> />
-
-                <TextView
-                    android:id="@+id/txtProfile"
-                    android:layout_centerHorizontal="true"
-                    android:gravity="center"
-                    android:layout_width="70dp"
-                    android:layout_height="30dp"
-                    android:layout_marginTop="40dp"
-                    android:text="Cá Nhân" />
-            </RelativeLayout>
-            />
         </LinearLayout>
         </androidx.cardview.widget.CardView>
 

@@ -1,4 +1,4 @@
-package com.example.fastfoodapp.Model;
+package com.example.ducluu.petshop.model;
 
 import java.io.Serializable;
 

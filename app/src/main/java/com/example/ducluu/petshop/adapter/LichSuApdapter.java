@@ -1,26 +1,22 @@
-package com.example.fastfoodapp.Adapter;
+package com.example.ducluu.petshop.adapter;
 
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.fastfoodapp.Activity.ShowDetail;
-import com.example.fastfoodapp.Helper.ManagementCard;
-import com.example.fastfoodapp.Model.LichSu;
-import com.example.fastfoodapp.Model.MonAn;
-import com.example.fastfoodapp.R;
+import com.example.ducluu.petshop.Helper.ManagementCard;
+import com.example.ducluu.petshop.model.LichSu;
+import com.example.ducluu.petshop.model.MonAn;
+import com.example.ducluu.petshop.R;
 
 import java.text.NumberFormat;
 import java.util.ArrayList;
@@ -43,14 +39,14 @@ public class LichSuApdapter extends RecyclerView.Adapter<LichSuApdapter.ViewHold
 
     @NonNull
     @Override
-    public LichSuApdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_dong,parent,false);
         ViewHolder viewHolder = new ViewHolder(view);
         return viewHolder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull LichSuApdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
         Glide.with(context)
                 .load(lichSuArrayList.get(position).getImgFood())

@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -25,6 +26,8 @@ import com.android.volley.toolbox.Volley;
 import com.example.ducluu.petshop.R;
 import com.example.ducluu.petshop.adapter.MonAnListAdapter;
 import com.example.ducluu.petshop.databinding.ActivitySanPhamBinding;
+import com.example.ducluu.petshop.databinding.ActivityThucAnBinding;
+import com.example.ducluu.petshop.databinding.ActivityThuocThuYBinding;
 import com.example.ducluu.petshop.model.MonAn;
 import com.example.ducluu.petshop.utils.Utils;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -37,9 +40,9 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 public class ThucAn extends AppCompatActivity {
-    ActivitySanPhamBinding binding;
+    ActivityThucAnBinding binding;
 
-    String url = Utils.BASE_URL+"shopthucung/sanpham/thucancho.php";
+    String url = Utils.BASE_URL+"Laptrinhdidong_T7/shopthucung/sanpham/thucancho.php";
 
     MonAnListAdapter monAnListAdapter;
     RecyclerView recyclerView;
@@ -48,13 +51,14 @@ public class ThucAn extends AppCompatActivity {
     RequestQueue requestQueue;
     ArrayList<MonAn> monAnList;
     ImageButton bt1,bt2,bt3,bt4;
+    ImageButton btnback;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_thuc_an);
         BottomNavigationView bt  = findViewById(R.id.bottom_navigation);
 
-        binding = ActivitySanPhamBinding.inflate(getLayoutInflater());
+        binding = ActivityThucAnBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         monAnList = new ArrayList<>();
@@ -64,6 +68,16 @@ public class ThucAn extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
         call_json();
         getViews();
+
+        btnback = findViewById(R.id.btnBack);
+        btnback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent Trangchu = new Intent(ThucAn.this, TrangChu.class);
+                startActivity(Trangchu);
+            }
+        });
+
 
         bt.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
@@ -110,7 +124,7 @@ public class ThucAn extends AppCompatActivity {
             public void onClick(View view) {
                 monAnListAdapter.clearApplications();
                 recyclerView.setAdapter(monAnListAdapter);
-                url = Utils.BASE_URL+"ltdd/shopthucung/sanpham/thucancho.php";
+                url = Utils.BASE_URL+"Laptrinhdidong_T7/shopthucung/sanpham/thucancho.php";
                 call_json();
             }
         });
@@ -119,7 +133,7 @@ public class ThucAn extends AppCompatActivity {
             public void onClick(View view) {
                 monAnListAdapter.clearApplications();
                 recyclerView.setAdapter(monAnListAdapter);
-                url = Utils.BASE_URL+"ltdd/shopthucung/sanpham/thucanmeo.php";
+                url = Utils.BASE_URL+"Laptrinhdidong_T7/shopthucung/sanpham/thucanmeo.php";
                 call_json();
             }
         });
@@ -128,7 +142,7 @@ public class ThucAn extends AppCompatActivity {
             public void onClick(View view) {
                 monAnListAdapter.clearApplications();
                 recyclerView.setAdapter(monAnListAdapter);
-                url = Utils.BASE_URL+"ltdd/shopthucung/sanpham/thucanchim.php";
+                url = Utils.BASE_URL+"Laptrinhdidong_T7/shopthucung/sanpham/thucanchim.php";
                 call_json();
             }
         });
@@ -137,7 +151,7 @@ public class ThucAn extends AppCompatActivity {
             public void onClick(View view) {
                 monAnListAdapter.clearApplications();
                 recyclerView.setAdapter(monAnListAdapter);
-                url = Utils.BASE_URL+"ltdd/shopthucung/sanpham/thucanca.php";
+                url = Utils.BASE_URL+"Laptrinhdidong_T7/shopthucung/sanpham/thucanca.php";
                 call_json();
             }
         });

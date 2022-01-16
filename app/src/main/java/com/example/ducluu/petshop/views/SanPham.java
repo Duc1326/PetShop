@@ -35,15 +35,11 @@ import java.util.ArrayList;
 
 public class SanPham extends AppCompatActivity {
 
-<<<<<<< HEAD
-     ActivitySanPhamBinding binding;
+
+    ActivitySanPhamBinding binding;
     String urlBase= Utils.BASE_URL;
     String url = Utils.BASE_URL+"Laptrinhdidong_T7/shopthucung/sanpham/thucho.php";
-=======
-    ActivitySanPhamBinding binding;
 
-    String url = Utils.BASE_URL+"shopthucung/sanpham/thucho.php";
->>>>>>> 47ae1ff794f339f3f67c800ce29f2c49aad8276e
 
     MonAnListAdapter monAnListAdapter;
     RecyclerView recyclerView;
@@ -70,36 +66,42 @@ public class SanPham extends AppCompatActivity {
 
 
 
-//        Intent intent = getIntent();
-//        Integer id = intent.getIntExtra("dulieu",1);
-//
-//        switch (id){
-//            case 1: button = findViewById(R.id.btn);
-//
-//                break;
-//            case 2:
-//                button = findViewById(R.id.btn1);
-//
-//                break;
-//            case 3:
-//                button = findViewById(R.id.btn2);
-//
-//                break;
-//            case 4:
-//                button = findViewById(R.id.btn3);
-//
-//                break;
-//            default:
-//                button = findViewById(R.id.btn);
-//
-//                break;
-//        }
+        Intent intent = getIntent();
+        Integer id = intent.getIntExtra("dulieu",1);
+
+        switch (id){
+            case 1:
+                url = Utils.BASE_URL+"Laptrinhdidong_T7/shopthucung/sanpham/thucho.php";
+                call_json();
+
+                break;
+            case 2:
+                url = Utils.BASE_URL+"Laptrinhdidong_T7/shopthucung/sanpham/thucmeo.php";
+                call_json();
+
+                break;
+            case 3:
+                url = Utils.BASE_URL+"Laptrinhdidong_T7/shopthucung/sanpham/thuchim.php";
+                call_json();
+
+                break;
+            case 4:
+                url = Utils.BASE_URL+"Laptrinhdidong_T7/shopthucung/sanpham/thuca.php";
+                call_json();
+
+                break;
+            default:
+                url = Utils.BASE_URL+"Laptrinhdidong_T7/shopthucung/sanpham/thucho.php";
+                call_json();
+
+                break;
+        }
         bt1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 monAnListAdapter.clearApplications();
                 recyclerView.setAdapter(monAnListAdapter);
-                url = Utils.BASE_URL+"ltdd/shopthucung/sanpham/thucho.php";
+                url = Utils.BASE_URL+"Laptrinhdidong_T7/shopthucung/sanpham/thucho.php";
                 call_json();
             }
         });
@@ -108,7 +110,7 @@ public class SanPham extends AppCompatActivity {
             public void onClick(View view) {
                 monAnListAdapter.clearApplications();
                 recyclerView.setAdapter(monAnListAdapter);
-                url = Utils.BASE_URL+"ltdd/shopthucung/sanpham/thumeo.php";
+                url = Utils.BASE_URL+"Laptrinhdidong_T7/shopthucung/sanpham/thumeo.php";
                 call_json();
             }
         });
@@ -117,7 +119,7 @@ public class SanPham extends AppCompatActivity {
             public void onClick(View view) {
                 monAnListAdapter.clearApplications();
                 recyclerView.setAdapter(monAnListAdapter);
-                url = Utils.BASE_URL+"ltdd/shopthucung/sanpham/thuchim.php";
+                url = Utils.BASE_URL+"Laptrinhdidong_T7/shopthucung/sanpham/thuchim.php";
                 call_json();
             }
         });
@@ -126,7 +128,7 @@ public class SanPham extends AppCompatActivity {
             public void onClick(View view) {
                 monAnListAdapter.clearApplications();
                 recyclerView.setAdapter(monAnListAdapter);
-                url = Utils.BASE_URL+"ltdd/shopthucung/sanpham/thuca.php";
+                url = Utils.BASE_URL+"Laptrinhdidong_T7/shopthucung/sanpham/thuca.php";
                 call_json();
             }
         });

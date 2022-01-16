@@ -16,7 +16,7 @@
             android:layout_height="80dp"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="5dp"
-            android:src="@drawable/pizza" />
+            android:src="@drawable/anhcho" />
 
         <TextView
             android:id="@+id/soluongHis"
@@ -92,13 +92,13 @@
 
         <Button
             android:id="@+id/btnReOrder"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="35dp"
             android:layout_below="@+id/ngaymuaHis"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="15dp"
-            android:background="@drawable/button"
-            android:text="Đặt lại"
+            android:background="@drawable/boder_5"
+            android:text="Xem Chi Tiết"
             android:textColor="#ffffff" />
 
 </RelativeLayout>

@@ -67,6 +67,7 @@
             android:layout_marginTop="140dp"
             android:layout_marginEnd="30dp"
             android:background="@drawable/boder_3"
+            android:inputType="textPassword"
             android:hint="Password" />
 
         <TextView
@@ -75,10 +76,9 @@
             android:layout_height="36dp"
             android:layout_marginStart="175dp"
             android:layout_marginTop="200dp"
-            android:background="#F3F3D0"
             android:text="Bạn đã quên mật khẩu?"
             android:textAllCaps="false"
-            android:textColor="#33FFFF"
+            android:textColor="#336699"
             android:textSize="17sp" />
 
         <Button

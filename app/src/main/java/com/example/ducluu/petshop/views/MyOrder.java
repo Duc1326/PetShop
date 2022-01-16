@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -62,7 +63,7 @@ public class MyOrder extends AppCompatActivity {
 
     String getId;
     SessionManager sessionManager;
-    String url = Utils.BASE_URL + "Laptrinhdidong_T7/shopthucung/profile/read_detail.php";
+    String url = Utils.BASE_URL + "/Laptrinhdidong_T7/shopthucung/profile/read_detail.php";
     String url_order = Utils.BASE_URL+ "Laptrinhdidong_T7/shopthucung/Order.php";
 
     @Override
@@ -167,7 +168,7 @@ public class MyOrder extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> param = new HashMap<>();
-                param.put("id", "6");
+                param.put("id", getId);
                 return param;
             }
         };

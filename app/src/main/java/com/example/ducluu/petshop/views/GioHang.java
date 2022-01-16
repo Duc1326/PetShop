@@ -3,6 +3,8 @@ package com.example.ducluu.petshop.views;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,6 +28,7 @@ public class GioHang extends AppCompatActivity {
 
     TextView btnBack, tvTong, emptyTxt;
     TextView btnOrder;
+    ImageButton back;
 
     private RecyclerView.Adapter adapter;
     private RecyclerView recyclerViewList;
@@ -45,6 +48,8 @@ public class GioHang extends AppCompatActivity {
         AnhXa();
         initList();
         CalculateCard();
+
+
     }
 
     private void initList() {

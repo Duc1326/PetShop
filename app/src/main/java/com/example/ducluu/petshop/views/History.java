@@ -1,8 +1,10 @@
-package com.example.fastfoodapp.Activity;
+package com.example.ducluu.petshop.views;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,13 +21,12 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.fastfoodapp.Adapter.LichSuApdapter;
-import com.example.fastfoodapp.App.SessionManager;
-import com.example.fastfoodapp.Model.LichSu;
-import com.example.fastfoodapp.R;
-
-import com.example.fastfoodapp.databinding.ActivityHistoryBinding;
-import com.example.fastfoodapp.utils.Utils;
+import com.example.ducluu.petshop.adapter.LichSuApdapter;
+import com.example.ducluu.petshop.App.SessionManager;
+import com.example.ducluu.petshop.model.LichSu;
+import com.example.ducluu.petshop.R;
+import com.example.ducluu.petshop.databinding.ActivityHistoryBinding;
+import com.example.ducluu.petshop.utils.Utils;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -41,10 +42,7 @@ public class History extends AppCompatActivity {
 
     ActivityHistoryBinding binding;
 
-    RelativeLayout btnProfile,btnProduct,btnHome;
-    TextView btnBackList;
-
-    String url = Utils.BASE_URL+"Android/ViewHistory.php";
+    String url = Utils.BASE_URL+"Laptrinhdidong_T7/shopthucung/History.php";
     String urlBase= Utils.BASE_URL;
 
     RecyclerView recyclerView;
@@ -53,6 +51,8 @@ public class History extends AppCompatActivity {
     LichSuApdapter lichSuApdapter;
     StringRequest request;
     RequestQueue requestQueue;
+
+    ImageButton btnBack;
 
     String getId;
     SessionManager sessionManager;
@@ -67,7 +67,7 @@ public class History extends AppCompatActivity {
         HashMap<String, String> user = sessionManager.getUserDetail();
         getId = user.get(sessionManager.ID);
 
-        CainaylaNut();
+
 
         lichsuList = new ArrayList<>();
         recyclerView = findViewById(R.id.recHistory);
@@ -75,6 +75,18 @@ public class History extends AppCompatActivity {
         layoutManager =new LinearLayoutManager(History.this,RecyclerView.VERTICAL,false);
         recyclerView.setLayoutManager(layoutManager);
         call_json();
+
+        btnBack = findViewById( R.id.btnBackList);
+
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent back = new Intent(History.this, NguoiDung.class);
+                startActivity(back);
+            }
+        });
+
+
 
     }
 
@@ -93,12 +105,12 @@ public class History extends AppCompatActivity {
 
                         LichSu getLichSuAdapter = new LichSu();
 
-                        getLichSuAdapter.setNameFood(jsonObject.getString("nameFood"));
+                        getLichSuAdapter.setNameFood(jsonObject.getString("Ten"));
                         getLichSuAdapter.setDonGia(jsonObject.getInt("GiaTong"));
-                        getLichSuAdapter.setNgayMua(jsonObject.getString("NgayBan"));
+                        getLichSuAdapter.setNgayMua(jsonObject.getString("NgayLap"));
                         getLichSuAdapter.setSoluong(jsonObject.getInt("SoLuong"));
 
-                        getLichSuAdapter.setImgFood(urlBase.concat(jsonObject.getString("imgFood")));
+                        getLichSuAdapter.setImgFood(jsonObject.getString("HinhAnh"));
 
                         lichsuList.add(getLichSuAdapter);
 
@@ -129,40 +141,7 @@ public class History extends AppCompatActivity {
         requestQueue.add(request);
     }
 
-    private void CainaylaNut() {
 
-        btnBackList=(TextView) findViewById(R.id.btnBackList);
-        btnBackList.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(History.this, Home.class));
-            }
-        });
-
-        btnHome=(RelativeLayout) findViewById(R.id.btnHome);
-        btnHome.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(History.this, Home.class));
-            }
-        });
-
-        btnProfile=(RelativeLayout) findViewById(R.id.btnProfile1);
-        btnProfile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(History.this, Profile.class));
-            }
-        });
-
-        btnProduct=(RelativeLayout) findViewById(R.id.btnProduct);
-        btnProduct.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(History.this, ListProduct.class));
-            }
-        });
-    }
 
 
 }
