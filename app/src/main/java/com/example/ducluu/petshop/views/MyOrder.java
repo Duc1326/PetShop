@@ -63,8 +63,17 @@ public class MyOrder extends AppCompatActivity {
 
     String getId;
     SessionManager sessionManager;
+<<<<<<< HEAD
     String url = Utils.BASE_URL + "Laptrinhdidong_T7/shopthucung/profile/read_detail.php";
+=======
+<<<<<<< HEAD
+    String url = Utils.BASE_URL + "/Laptrinhdidong_T7/shopthucung/profile/read_detail.php";
+>>>>>>> d82369e0835bacf3b38e018af575c0451bf253e4
     String url_order = Utils.BASE_URL+ "Laptrinhdidong_T7/shopthucung/Order.php";
+=======
+    String url = Utils.BASE_URL + "/shopthucung/profile/read_detail.php";
+    String url_order = Utils.BASE_URL+ "/shopthucung/Order.php";
+>>>>>>> 0ca3c3bdd31eee4a6a092fc0023636458b02a4da
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

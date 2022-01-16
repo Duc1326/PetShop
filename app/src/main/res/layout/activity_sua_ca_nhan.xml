@@ -59,18 +59,17 @@
                 android:textStyle="bold"
                 android:gravity="center"
                 />
-
             <EditText
-                android:id="@+id/ed_ten"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
-                android:layout_marginTop="40dp"
-                android:gravity="center"
                 android:hint="ten"
                 android:textColor="@color/black"
                 android:textSize="22sp"
-                android:textStyle="bold" />
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="25dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                />
         </LinearLayout>
 
         <LinearLayout
@@ -92,10 +91,10 @@
                 />
 
             <EditText
-                android:id="@+id/ed_email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
+
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="10dp"
                 android:hint="minhtandz951@gmail.com"
@@ -121,8 +120,7 @@
                 android:textStyle="bold"
                 android:gravity="center"
                 />
-            <EditText
-                android:id="@+id/ed_sdt"
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="0392252429"
@@ -152,8 +150,7 @@
                 android:textStyle="bold"
                 android:gravity="center"
                 />
-            <EditText
-                android:id="@+id/ed_ngaysinh"
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="18/10/2001"
@@ -178,23 +175,24 @@
                 android:text="Địa Chỉ:"
                 android:textColor="@color/black"
                 android:textSize="22sp"
+
                 android:textStyle="bold"
                 android:gravity="center"
                 />
-            <EditText
-                android:id="@+id/ed_diachi"
+            <TextView
                 android:layout_width="265dp"
                 android:layout_height="wrap_content"
                 android:hint="Tam Tành phú ninh quảng nam"
                 android:textColor="@color/black"
                 android:textSize="23sp"
+
                 android:layout_marginLeft="25dp"
                 android:textStyle="bold"
                 android:gravity="center"
                 />
         </LinearLayout>
         <Button
-            android:id="@+id/btn_sua"
+            android:id="@+id/btn_add"
             android:layout_width="130dp"
             android:layout_height="50dp"
             android:layout_marginLeft="200dp"

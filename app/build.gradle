@@ -7,8 +7,20 @@ android {
 
     defaultConfig {
         applicationId "com.example.ducluu.petshop"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 0ca3c3bdd31eee4a6a092fc0023636458b02a4da
         minSdk 29
         minSdk 26
+<<<<<<< HEAD
+=======
+>>>>>>> 47ae1ff794f339f3f67c800ce29f2c49aad8276e
+=======
+        minSdk 30
+>>>>>>> parent of bb9d55e (minh up phan cap nhap thong tin ca nhan)
+>>>>>>> 0ca3c3bdd31eee4a6a092fc0023636458b02a4da
         targetSdk 31
         versionCode 1
         versionName "1.0"
