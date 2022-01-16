@@ -40,7 +40,7 @@ public class CaNhan extends AppCompatActivity {
     String getId;
     private ManagementCard managementCard;
     SessionManager sessionManager;
-    String url = Utils.BASE_URL + "/shopthucung/profile/read_detail.php";
+    String url = Utils.BASE_URL + "ltdd/shopthucung/profile/read_detail.php";
     TextView tenkh,emailkh,sdtkh,ngaysinhkh,diachikh;
     Button btnsua;
     @Override

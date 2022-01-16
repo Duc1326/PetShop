@@ -62,8 +62,8 @@ public class MyOrder extends AppCompatActivity {
 
     String getId;
     SessionManager sessionManager;
-    String url = Utils.BASE_URL + "/shopthucung/profile/read_detail.php";
-    String url_order = Utils.BASE_URL+ "/shopthucung/Order.php";
+    String url = Utils.BASE_URL + "ltdd/shopthucung/profile/read_detail.php";
+    String url_order = Utils.BASE_URL+ "ltdd/shopthucung/Order.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,11 +82,11 @@ public class MyOrder extends AppCompatActivity {
         initList();
         CalculateCard();
 
-        Spinner MySpinner2 = (Spinner) findViewById(R.id.spinnerDC);
+//        Spinner MySpinner2 = (Spinner) findViewById(R.id.spinnerDC);
         ArrayAdapter<String> myAdapter2 = new
                 ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, dayOfWeek);
         myAdapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        MySpinner2.setAdapter(myAdapter2);
+//        MySpinner2.setAdapter(myAdapter2);
     }
 
     private void initList() {
@@ -236,7 +236,7 @@ public class MyOrder extends AppCompatActivity {
                 startActivity(new Intent(MyOrder.this, GioHang.class));
             }
         });
-        btnCheckOut = (LinearLayout) findViewById(R.id.btnCheckOut);
+//        btnCheckOut = (LinearLayout) findViewById(R.id.btnCheckOut);
         btnCheckOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -269,7 +269,7 @@ public class MyOrder extends AppCompatActivity {
         tenkh = (TextView) findViewById(R.id.tenkh);
         sdtkh = findViewById(R.id.sdtkh);
         diachi = findViewById(R.id.dc);
-        diachicuthe = findViewById(R.id.dccuthe);
+//        diachicuthe = findViewById(R.id.dccuthe);
         tvTongOrder = findViewById(R.id.tvTongOrder);
         txtEmpty = findViewById(R.id.emptyTxt);
         tvOrder = findViewById(R.id.tvOrder);
