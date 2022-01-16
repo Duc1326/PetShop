@@ -38,7 +38,7 @@
             android:layout_height="50dp"
             android:layout_marginLeft="270dp"
             android:layout_marginTop="120dp"
-            android:background="@drawable/boder_4"
+            android:background="@drawable/boder_8"
             android:backgroundTint="#F8F8A0"
             android:text="Chỉnh sữa" />
 

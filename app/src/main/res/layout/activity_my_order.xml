@@ -101,7 +101,7 @@
                     android:orientation="horizontal">
 
                     <LinearLayout
-                        android:layout_width="314dp"
+                        android:layout_width="340dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="10dp"
@@ -111,39 +111,51 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content">
 
-                            <TextView
+                            <EditText
                                 android:id="@+id/tenkh"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/lato_regular"
                                 android:text="Lisa"
-                                android:textColor="#000000" />
+                                android:textColor="#000000"
+                                android:textSize="13dp" />
 
-                            <TextView
+                            <EditText
                                 android:id="@+id/sdtkh"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/lato_regular"
                                 android:text=" 0339 045 945"
-                                android:textColor="#000000" />
+                                android:textColor="#000000"
+                                android:textSize="13dp" />
 
                         </LinearLayout>
 
-                        <TextView
-                            android:id="@+id/dccuthe"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/lato_regular"
-                            android:text="12 Thọ Quang"
-                            android:textColor="#000000" />
 
-                        <TextView
+
+                        <EditText
                             android:id="@+id/dc"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/lato_regular"
                             android:text="Phường Mãn Thái,Quận Sơn Trà, Đà Nẵng"
-                            android:textColor="#000000" />
+                            android:textColor="#000000"
+                            android:textSize="13dp"/>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recOrder"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/bc_myorder"
+                            android:divider="#EFEFEF"
+                            android:dividerHeight="4dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.0" />
 
 
                     </LinearLayout>
@@ -204,20 +216,6 @@
                     app:layout_constraintStart_toStartOf="parent" />
 
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recOrder"
-                    android:layout_width="match_parent"
-                    android:layout_height="202dp"
-                    android:layout_margin="10dp"
-                    android:background="@drawable/bc_myorder"
-                    android:divider="#EFEFEF"
-                    android:dividerHeight="4dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0" />
             </LinearLayout>
 
             <LinearLayout
@@ -228,38 +226,7 @@
                 android:layout_marginRight="10dp"
                 android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="20dp"
-                    android:layout_marginTop="5dp"
-                    android:orientation="horizontal">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/lato_regular"
-                        android:text="Phương thức thanh toán"
-                        android:textColor="#000000"
-                        android:textSize="14dp" />
-
-                    <LinearLayout
-                        android:id="@+id/btnCheckOut"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="right"
-                        android:orientation="horizontal">
-
-                        <Spinner
-                            android:spinnerMode="dropdown"
-                            android:textAlignment="textEnd"
-                            android:id="@+id/spinnerDC"
-                            android:layout_width="fill_parent"
-                            android:layout_height="wrap_content"/>
-                        
-                    </LinearLayout>
-
-
-                </LinearLayout>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -329,7 +296,7 @@
                                 android:layout_height="match_parent"
                                 android:fontFamily="@font/lato_regular"
                                 android:gravity="right"
-                                android:text="Miễn phí" />
+                                android:text="0 đồng" />
 
                             <TextView
                                 android:layout_width="121dp"
@@ -337,7 +304,7 @@
                                 android:layout_marginTop="5dp"
                                 android:fontFamily="@font/lato_regular"
                                 android:gravity="right"
-                                android:text="Miễn phí" />
+                                android:text="0 đồng" />
 
                         </LinearLayout>
 
