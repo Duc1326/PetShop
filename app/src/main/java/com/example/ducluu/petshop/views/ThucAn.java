@@ -39,7 +39,7 @@ import java.util.ArrayList;
 public class ThucAn extends AppCompatActivity {
     ActivitySanPhamBinding binding;
 
-    String url = Utils.BASE_URL+"shopthucung/sanpham/thucancho.php";
+    String url = Utils.BASE_URL+"ltdd/shopthucung/sanpham/thucancho.php";
 
     MonAnListAdapter monAnListAdapter;
     RecyclerView recyclerView;

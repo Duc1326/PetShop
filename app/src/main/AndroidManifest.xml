@@ -58,7 +58,7 @@
             android:name=".views.ThongBao"
             android:exported="true" />
         <activity
-            android:name=".views.TrangChu"
+            android:name=".views.Anhvao_activity"
             android:exported="true" />
         <activity
             android:name=".views.GioHang"
@@ -71,7 +71,7 @@
             android:exported="true"
             android:label="@string/title_activity_bottom_navigation" />
         <activity
-            android:name=".views.Anhvao_activity"
+            android:name=".views.TrangChu"
             android:exported="true"
             >
             <intent-filter>

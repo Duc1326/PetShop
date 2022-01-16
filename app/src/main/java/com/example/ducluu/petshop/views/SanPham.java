@@ -35,19 +35,12 @@ import java.util.ArrayList;
 
 public class SanPham extends AppCompatActivity {
 
-<<<<<<< HEAD
-     ActivitySanPhamBinding binding;
-    String urlBase= Utils.BASE_URL;
-<<<<<<< HEAD
-    String url = Utils.BASE_URL+"Laptrinhdidong_T7/shopthucung/sanpham/thucho.php";
-=======
-    ActivitySanPhamBinding binding;
 
-    String url = Utils.BASE_URL+"shopthucung/sanpham/thucho.php";
->>>>>>> 47ae1ff794f339f3f67c800ce29f2c49aad8276e
-=======
-    String url = Utils.BASE_URL+"/shopthucung/sanpham/thucho.php";
->>>>>>> parent of bb9d55e (minh up phan cap nhap thong tin ca nhan)
+     ActivitySanPhamBinding binding;
+
+    String url = Utils.BASE_URL+"ltdd/shopthucung/sanpham/thucho.php";
+
+
 
     MonAnListAdapter monAnListAdapter;
     RecyclerView recyclerView;

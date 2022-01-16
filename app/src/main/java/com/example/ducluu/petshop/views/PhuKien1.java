@@ -38,7 +38,7 @@ public class PhuKien1 extends AppCompatActivity {
 //    SanPhamAdapter adapter ;
     ActivitySanPhamBinding binding;
 
-    String url = Utils.BASE_URL+"shopthucung/sanpham/phukiencho.php";
+    String url = Utils.BASE_URL+"/ltddshopthucung/sanpham/phukiencho.php";
 
     MonAnListAdapter monAnListAdapter;
     RecyclerView recyclerView;

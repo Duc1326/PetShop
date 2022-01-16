@@ -41,7 +41,7 @@ public class ThuocThuY extends AppCompatActivity {
 
     ActivitySanPhamBinding binding;
 
-    String url = Utils.BASE_URL+"shopthucung/sanpham/thuoccho.php";
+    String url = Utils.BASE_URL+"ltdd/shopthucung/sanpham/thuoccho.php";
 
     MonAnListAdapter monAnListAdapter;
     RecyclerView recyclerView;
