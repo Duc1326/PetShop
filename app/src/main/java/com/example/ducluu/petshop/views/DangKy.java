@@ -31,7 +31,7 @@ public class DangKy extends AppCompatActivity {
     EditText sdt, pass, pass2;
     ImageButton btn_back;
     String Name,Email,Pass,PassConf;
-    String url = Utils.BASE_URL + "/shopthucung/canhan/dangki.php";
+    String url = Utils.BASE_URL + "Laptrinhdidong_T7/shopthucung/canhan/dangki.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -35,9 +35,15 @@ import java.util.ArrayList;
 
 public class SanPham extends AppCompatActivity {
 
+<<<<<<< HEAD
+     ActivitySanPhamBinding binding;
+    String urlBase= Utils.BASE_URL;
+    String url = Utils.BASE_URL+"Laptrinhdidong_T7/shopthucung/sanpham/thucho.php";
+=======
     ActivitySanPhamBinding binding;
 
     String url = Utils.BASE_URL+"shopthucung/sanpham/thucho.php";
+>>>>>>> 47ae1ff794f339f3f67c800ce29f2c49aad8276e
 
     MonAnListAdapter monAnListAdapter;
     RecyclerView recyclerView;
